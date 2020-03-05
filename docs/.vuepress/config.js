@@ -42,7 +42,7 @@ module.exports = {
 		logo: "/assets/img/kubepia.png",
 		nav: [
 			{ text: "Home", link: "/" },
-			{ text: "Devops", link: "/devops/" },
+			{ text: "DevOps", link: "/devops/overview" },
 			{ text: "K8S", link: "/k8s/" },
 			{ text: "Architecture", link: "/architecture/" }
 		],
@@ -55,8 +55,8 @@ module.exports = {
 					sidebarDepth: 1, // optional, defaults to 1
 					children: [
 						{
-							title: "step01",
-							path: "/devops/step01"
+							title: "Overview",
+							path: "/devops/overview"
 						}
 					]
 				}
