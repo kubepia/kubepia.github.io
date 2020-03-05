@@ -7,8 +7,8 @@
 		"doc": "docs"
 	},
 	"scripts": {
-		"dev": "vuepress dev src",
-		"build": "vuepress build src"
+		"dev": "vuepress dev docs",
+		"build": "vuepress build docs"
 	},
 	"author": "kube",
 	"license": "ISC",
