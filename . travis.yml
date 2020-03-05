@@ -1,16 +1,16 @@
 language: node_js
 node_js:
-  - lts/*
+  - "12"
 install:
-  - npm install # npm ci
+  - npm install
 script:
-  - vuepress build src # npm run docs:build
+  - npm run build
+
 deploy:
   provider: pages
   skip_cleanup: true
-  local_dir: src/.vuepress/dist
-  repo: iamnogada/kubepia.github.io
-  github_token: $ACCESS_TOKEN # A token generated on GitHub allowing Travis to push code on you repository. Set in the Travis settings page of your repository, as a secure variable
-  keep_history: true
+  github_token: $GIT_TOKEN
+  local_dir: docs/.vuepress/dist
+  target-branch: master
   on:
-    branch: master
+    branch: dev
