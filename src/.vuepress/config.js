@@ -1,5 +1,5 @@
 module.exports = {
-	base: "/docs/",
+	base: "/",
 	title: "Kubepia Documents",
 	description: "Technical guidelines about kubernetes",
 	dest: "./docs",
