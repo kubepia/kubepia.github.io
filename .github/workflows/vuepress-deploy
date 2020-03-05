@@ -12,7 +12,7 @@ jobs:
       - name: vuepress-deploy
         uses: jenkey2011/vuepress-deploy@master
         env:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          ACCESS_TOKEN: 5f4eae42cce0cae4a3267d33663f7cbd2b1fcc77
           TARGET_REPO: kubepia/kubepia.github.io
           TARGET_BRANCH: master
           BUILD_SCRIPT: npm i && npm run build
