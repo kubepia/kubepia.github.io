@@ -15,3 +15,4 @@ jobs:
         TARGET_BRANCH: master
         BUILD_SCRIPT: yarn && yarn build
         BUILD_DIR: blog/.vuepress/dist/
+key: a3f9d85384563333d5b98ea7aa095234ae3d0980
