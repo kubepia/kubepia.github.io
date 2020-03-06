@@ -16,16 +16,15 @@ sidebarDepth: 1
 
 ## Contact Information
 
-`Snail-mail (work):`  
+**Snail-mail (work):**  
 KOLON BENIT CO.,LTD.  
 1-23 KOLON Tower 9FL  
 Byeoryang-dong, Gwacheon Si  
 Gyeonggi-Do 427-709  
 KOREA  
 
-`Phone (work):`  
+**Phone (work):**  
 +82-2-2120-7238
 
-`Email:`  
+**Email:**  
 ahnkiseok@icloud.com
-```
