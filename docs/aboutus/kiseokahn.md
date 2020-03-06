@@ -7,12 +7,15 @@ sidebarDepth: 1
 
 ![](./img/peon.jpg)
 
+I am a software engineer👨🏻‍💻  
+And i work in the Kubepia community🧏🏻
+
 ## Hobby
 
 * Playing games (즐겜러🙈)
 * Listening to music
 * Watching movies
-* I usually spend time playing computer👨🏻‍💻
+* I usually spend time playing computer🤓
 
 ## Contact Information
 
