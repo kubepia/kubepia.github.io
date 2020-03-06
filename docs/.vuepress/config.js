@@ -47,7 +47,7 @@ module.exports = {
 			{ text: "DevOps", link: "/devops/overview" },
 			{ text: "K8S", link: "/k8s/" },
 			{ text: "Architecture", link: "/architecture/" },
-			{ text: "About US", link: "/aboutus/" }
+			{ text: "About US", link: "/aboutus/iamnogada" }
 		],
 		sidebar: {
 			"/devops/": [
