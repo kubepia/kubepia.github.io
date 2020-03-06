@@ -89,7 +89,7 @@ module.exports = {
 						},
 						{
 							title: "jwyoon-darum",
-							path: "/aboutus/iamnogada"
+							path: "/aboutus/jwyoon"
 						},
 						{
 							title: "kiseokahn",
