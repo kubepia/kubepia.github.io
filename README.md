@@ -64,3 +64,8 @@
 4. add display name in title
 5. children items : title & path in array under children
    ![](./img/2020-03-06-16-29-44.png)
+
+### How to comment and reply block
+
+1. add '<disqus/>' at the bottom of page
+2. log in disqus.com with kubepia2020@gmail.com

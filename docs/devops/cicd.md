@@ -27,3 +27,7 @@ next: /devops/strategy
 :::
 
 ![](./img/2020-03-06-11-26-11.png)
+
+---
+[[toc]]
+<disqus/>
