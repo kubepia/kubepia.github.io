@@ -18,7 +18,7 @@
    cd kubepia.github.io
    git branch
    ```
-2. make sure branch is 'dev' 
+2. make sure branch is 'dev'.\
    ![](./img/2020-03-06-16-17-50.png)
 
 #### Step02 : Write/Modify
