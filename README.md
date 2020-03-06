@@ -26,8 +26,11 @@
    ```sh
    git checkout -b 20200305
    ```
-2. create/modify document
-3. commit
+2. live view: npm run dev
+3. create/modify document
+4. test to build : npm run build
+5. make sure no error in console output
+6. commit
    ``` sh
    git add .
    git commit -m "describe changes"

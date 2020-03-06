@@ -85,27 +85,27 @@ module.exports = {
 						},
 						{
 							title: "hiondal",
-							path: "/aboutus/hiondal"
+							path: "/aboutus/iamnogada"
 						},
 						{
 							title: "jwyoon-darum",
-							path: "/aboutus/jwyoon-darum"
+							path: "/aboutus/iamnogada"
 						},
 						{
 							title: "kiseokahn",
-							path: "/aboutus/kiseokahn"
+							path: "/aboutus/iamnogada"
 						},
 						{
 							title: "kkphil83",
-							path: "/aboutus/kkphil83"
+							path: "/aboutus/iamnogada"
 						},
 						{
 							title: "SunnySunKim",
-							path: "/aboutus/SunnySunKim"
+							path: "/aboutus/iamnogada"
 						},
 						{
 							title: "yoohwasuk",
-							path: "/aboutus/yoohwasuk"
+							path: "/aboutus/iamnogada"
 						}
 					]
 				}
