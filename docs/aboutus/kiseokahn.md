@@ -1,14 +1,9 @@
 ---
 title: kiseokahn
-sidebarDepth: 3
-next: /devops/overview
+sidebarDepth: 1
 ---
 
-Hello World
 
 # Overview
 
-## 2nd Depth
-
-### 3 depth
-
+Hello World
