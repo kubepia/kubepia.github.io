@@ -54,7 +54,7 @@ module.exports = {
 				{
 					title: "Devops",
 					// path: "/devops/", // optional, which should be a absolute path.
-					collapsable: false, // optional, defaults to true
+					// collapsable: false, // optional, defaults to true
 					sidebarDepth: 1, // optional, defaults to 1
 					children: [
 						{
