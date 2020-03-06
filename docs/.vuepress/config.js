@@ -46,7 +46,8 @@ module.exports = {
 			{ text: "Home", link: "/" },
 			{ text: "DevOps", link: "/devops/overview" },
 			{ text: "K8S", link: "/k8s/" },
-			{ text: "Architecture", link: "/architecture/" }
+			{ text: "Architecture", link: "/architecture/" },
+			{ text: "About US", link: "/aboutus/" }
 		],
 		sidebar: {
 			"/devops/": [
@@ -67,6 +68,32 @@ module.exports = {
 						{
 							title: "Deploy Strategy",
 							path: "/devops/strategy"
+						}
+					]
+				}
+			],
+			"/aboutus/": [
+				{
+					title: "AboutUs", // required
+					// path: "/devops/", // optional, which should be a absolute path.
+					collapsable: false, // optional, defaults to true
+					sidebarDepth: 1, // optional, defaults to 1
+					children: [
+						{
+							title: "jwyoon",
+							path: "/aboutus/"
+						},
+						{
+							title: "Overview",
+							path: "/aboutus/overview"
+						},
+						{
+							title: "CICD",
+							path: "/aboutus/cicd"
+						},
+						{
+							title: "Deploy Strategy",
+							path: "/aboutus/strategy"
 						}
 					]
 				}
