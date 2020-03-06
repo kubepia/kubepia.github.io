@@ -4,7 +4,7 @@ heroImage: /assets/img/hero.jpg
 heroText: kubepia
 tagline: enjoy kubernetes technology with us !
 actionText: Get Started →
-actionLink: /overview
+actionLink: /k8s/
 features:
 - title: Devops
   details: k8s를 활용한 또는 기반에서 활용할 수 있는 배포전략과 방법들을 설명합니다.
