@@ -93,7 +93,7 @@ module.exports = {
 						},
 						{
 							title: "kiseokahn",
-							path: "/aboutus/iamnogada"
+							path: "/aboutus/kiseokahn"
 						},
 						{
 							title: "kkphil83",
