@@ -59,6 +59,14 @@ module.exports = {
 						{
 							title: "Overview",
 							path: "/devops/overview"
+						},
+						{
+							title: "CICD",
+							path: "/devops/cicd"
+						},
+						{
+							title: "Deploy Strategy",
+							path: "/devops/strategy"
 						}
 					]
 				}
