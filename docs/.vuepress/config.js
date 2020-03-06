@@ -71,6 +71,44 @@ module.exports = {
 						}
 					]
 				}
+			],
+			"/aboutus/": [
+				{
+					title: "About US",
+					// path: "/devops/", // optional, which should be a absolute path.
+					collapsable: false, // optional, defaults to true
+					sidebarDepth: 1, // optional, defaults to 1
+					children: [
+						{
+							title: "iamnogada",
+							path: "/aboutus/iamnogada"
+						},
+						{
+							title: "hiondal",
+							path: "/aboutus/hiondal"
+						},
+						{
+							title: "jwyoon-darum",
+							path: "/aboutus/jwyoon-darum"
+						},
+						{
+							title: "kiseokahn",
+							path: "/aboutus/kiseokahn"
+						},
+						{
+							title: "kkphil83",
+							path: "/aboutus/kkphil83"
+						},
+						{
+							title: "SunnySunKim",
+							path: "/aboutus/SunnySunKim"
+						},
+						{
+							title: "yoohwasuk",
+							path: "/aboutus/yoohwasuk"
+						}
+					]
+				}
 			]
 		}
 		// sidebar: [
