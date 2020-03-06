@@ -13,13 +13,13 @@
 
 #### Step01 : Clone
 1. clone this repository with branch 'dev'
-  ```sh
-  git clone -o origin https://github.com/kubepia/kubepia.github.io.git
-  cd kubepia.github.io
-  git branch
-  ```
-2. Make sure branch is 'dev'
-  ![](./img/2020-03-06-16-17-50.png)
+   ```sh
+   git clone -o origin https://github.com/kubepia/kubepia.github.io.git
+   cd kubepia.github.io
+   git branch
+   ```
+2. make sure branch is 'dev' 
+   ![](./img/2020-03-06-16-17-50.png)
 
 #### Step02 : Write/Modify
 1. checkout branch to modify or add document in local only
