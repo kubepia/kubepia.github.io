@@ -45,7 +45,7 @@
 
 1. Open /docs/.vuepress/config.js
 2. goto item
-   ![](./img/2020-03-06-16-24-20.png)
+  ![](./img/2020-03-06-16-24-20.png)
 3. add name and link : { text: "DevOps", link: "/devops/overview" }
    1. text : display in nav menu
    2. link
@@ -56,8 +56,8 @@
 
 1. Open /docs/.vuepress/config.js
 2. goto item
-   ![](./img/2020-03-06-16-27-26.png)
+  ![](./img/2020-03-06-16-27-26.png)
 3. add match url to nav bar : if devops is selected, then "/devops/"
 4. add display name in title
 5. children items : title & path in array under children
-   ![](./img/2020-03-06-16-29-44.png)
+  ![](./img/2020-03-06-16-29-44.png)
