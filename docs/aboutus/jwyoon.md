@@ -1,6 +1,6 @@
 ---
 title: jwyoon
-sidebarDepth: 3
+sidebarDepth: 1
 next: /aboutus/kiseokahn
 ---
 

@@ -84,8 +84,8 @@ module.exports = {
 							path: "/aboutus/iamnogada"
 						},
 						{
-							title: "hiondal",
-							path: "/aboutus/iamnogada"
+							title: "이해경(Lee HaeKyung)",
+							path: "/aboutus/hiondal"
 						},
 						{
 							title: "jwyoon-darum",

@@ -1,6 +1,6 @@
 ---
 title: overview
-sidebarDepth: 3
+sidebarDepth: 2
 next: /devops/overview
 ---
 
