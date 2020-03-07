@@ -2,7 +2,7 @@
 title: 이해경(Lee HaeKyung)
 sidebarDepth: 1
 prev: false
-next: /devops/jwyoon
+next: /aboutus/jwyoon
 ---
 이해경(Lee HaeKyung)을 소개합니다. 
 [[toc]]
