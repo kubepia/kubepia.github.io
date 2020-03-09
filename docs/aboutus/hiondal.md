@@ -33,22 +33,6 @@ next: /aboutus/jwyoon
   - PoC: BNK
 ::: 
 
-## Skills
-::: danger Skills
-- Portal Consulting
-- Project Management
-- Application Architect
-- Hybrid Cloud Service Consulting 
-- Devlop: Java, Node.js, Domino, Web skills(html, js, css)
-:::
-
-::: tip Cloud related
-- docker
-- kubernetes
-- istio
-- Devops: Jenkins, helm, appsody, tekton
-:::
-
 ---
 
 <disqus/>
