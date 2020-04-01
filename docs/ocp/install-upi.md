@@ -114,3 +114,7 @@ fips: false
 5. master 3대, worker 반복
 
 ### Cluster 생성 확인 방법
+
+``` shell
+openshift-install --dir=/install/config wait-for bootstrap-complete --log-level=debug
+```
