@@ -46,6 +46,7 @@ module.exports = {
 			{ text: "Home", link: "/" },
 			{ text: "DevOps", link: "/devops/overview" },
 			{ text: "K8S", link: "/k8s/" },
+			{ text: "OCP4.X", link: "/ocp/overview" },
 			{ text: "Architecture", link: "/architecture/" },
 			{ text: "About US", link: "/aboutus/iamnogada" }
 		],
@@ -68,6 +69,24 @@ module.exports = {
 						{
 							title: "Deploy Strategy",
 							path: "/devops/strategy"
+						}
+					]
+				}
+			],
+			"/ocp/": [
+				{
+					title: "Openshift4.x",
+					// path: "/devops/", // optional, which should be a absolute path.
+					// collapsable: false, // optional, defaults to true
+					sidebarDepth: 1, // optional, defaults to 1
+					children: [
+						{
+							title: "Overview",
+							path: "/ocp/overview"
+						},
+						{
+							title: "Install-UPI",
+							path: "/ocp/install-upi"
 						}
 					]
 				}
