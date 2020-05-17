@@ -1,3 +1,5 @@
+let BASEDIR_CP4APP_INSTALL="/cloudpak/cp4app/install";
+
 module.exports = {
 	base: "/",
 	title: "Kubepia Documents",
@@ -96,15 +98,53 @@ module.exports = {
 			"/cloudpak/": [
 				{
 					title: "CloudPak",
-					sidebarDepth: 2, // optional, defaults to 1
+					sidebarDepth: 3, // optional, defaults to 1
 					children: [
 						{
 							title: "CP4App",
 							path: "/cloudpak/cp4app/overview",
 							children: [
 								{
-									title: "Install CP4App",
-									path: "cp4app/install"
+									title: "Install",
+									path: BASEDIR_CP4APP_INSTALL+"/install",
+									children: [
+										{
+											title: "Infra Node-VM 생성",
+											path: BASEDIR_CP4APP_INSTALL+"/infra01"
+										},
+										{
+											title: "Infra Node-Web서버 설치",
+											path: BASEDIR_CP4APP_INSTALL+"/infra02"
+										},
+										{
+											title: "Infra Node-DNS서버 설치",
+											path: BASEDIR_CP4APP_INSTALL+"/infra03"
+										},
+										{
+											title: "Infra Node-VM Network 설정",
+											path: BASEDIR_CP4APP_INSTALL+"/infra04"
+										},
+										{
+											title: "Infra Node-HAProxy서버 설치",
+											path: BASEDIR_CP4APP_INSTALL+"/infra05"
+										},
+										{
+											title: "Infra Node-DHCP서버 설치",
+											path: BASEDIR_CP4APP_INSTALL+"/infra06"
+										},
+										{
+											title: "Infra Node-NFS서버 설치",
+											path: BASEDIR_CP4APP_INSTALL+"/infra07"
+										},
+										{
+											title: "Infra Node-SSLKey 구성",
+											path: BASEDIR_CP4APP_INSTALL+"/infra08"
+										},
+										{
+											title: "Infra Node-IPTables 설치",
+											path: BASEDIR_CP4APP_INSTALL+"/infra09"
+										}
+									]
 								}
 							]
 						},
