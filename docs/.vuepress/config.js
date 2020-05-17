@@ -99,7 +99,7 @@ module.exports = {
 					children: [
 						{
 							title: "CP4App",
-							path: "/cloudpak/cp4app/overview"
+							path: "/cloudpak/cp4app/overview",
 							children: [
 								{
 									title: "Install CP4App",
