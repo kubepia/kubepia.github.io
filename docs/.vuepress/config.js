@@ -99,6 +99,7 @@ module.exports = {
 				{
 					title: "CloudPak",
 					sidebarDepth: 3, // optional, defaults to 1
+					path: "/cloudpak/overview",
 					children: [
 						{
 							title: "CP4App",
