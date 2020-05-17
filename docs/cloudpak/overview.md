@@ -1,5 +1,2 @@
 # IBM CloudPak
-test1
-
-
 
