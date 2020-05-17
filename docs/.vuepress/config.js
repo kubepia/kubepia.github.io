@@ -95,11 +95,17 @@ module.exports = {
 			"/cloudpak/": [
 				{
 					title: "CloudPak",
-					sidebarDepth: 1, // optional, defaults to 1
+					sidebarDepth: 2, // optional, defaults to 1
 					children: [
 						{
 							title: "CP4App",
 							path: "/cloudpak/cp4app/overview"
+							children: [
+								{
+									title: "Install CP4App",
+									path: "cp4app/install"
+								}
+							]
 						},
 						{
 							title: "CP4MM",
