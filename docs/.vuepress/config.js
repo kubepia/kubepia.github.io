@@ -118,11 +118,11 @@ module.exports = {
 											path: BASEDIR_CP4APP_INSTALL+"/infra02"
 										},
 										{
-											title: "Infra Node-DNS서버 설치",
+											title: "Infra Node-VM Network 설정",
 											path: BASEDIR_CP4APP_INSTALL+"/infra03"
 										},
 										{
-											title: "Infra Node-VM Network 설정",
+											title: "Infra Node-DNS서버 설치",
 											path: BASEDIR_CP4APP_INSTALL+"/infra04"
 										},
 										{

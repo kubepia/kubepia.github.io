@@ -1,4 +1,2 @@
-# Infra Node-VM Network 설정
-
-
+# Infra Node-DNS서버 설치
 
