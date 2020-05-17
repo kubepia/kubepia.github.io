@@ -47,7 +47,7 @@ module.exports = {
 			{ text: "DevOps", link: "/devops/overview" },
 			{ text: "K8S", link: "/k8s/" },
 			{ text: "OCP4.X", link: "/ocp/overview" },
-			{ text: "CloudPak", link: "/cloudpak/" },
+			{ text: "CloudPak", link: "/cloudpak/overview" },
 			{ text: "Architecture", link: "/architecture/" },
 			{ text: "About US", link: "/aboutus/iamnogada" }
 		],
@@ -95,7 +95,7 @@ module.exports = {
 			"/cloudpak/": [
 				{
 					title: "CloudPak",
-					sidebarDepth: 2, // optional, defaults to 1
+					sidebarDepth: 1, // optional, defaults to 1
 					children: [
 						{
 							title: "CP4App",
