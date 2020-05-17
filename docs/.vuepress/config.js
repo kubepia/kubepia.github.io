@@ -47,6 +47,7 @@ module.exports = {
 			{ text: "DevOps", link: "/devops/overview" },
 			{ text: "K8S", link: "/k8s/" },
 			{ text: "OCP4.X", link: "/ocp/overview" },
+			{ text: "CloudPak", link: "/cloudpak/" },
 			{ text: "Architecture", link: "/architecture/" },
 			{ text: "About US", link: "/aboutus/iamnogada" }
 		],
@@ -87,6 +88,22 @@ module.exports = {
 						{
 							title: "Install-UPI",
 							path: "/ocp/install-upi"
+						}
+					]
+				}
+			],	
+			"/cloudpak/": [
+				{
+					title: "CloudPak",
+					sidebarDepth: 2, // optional, defaults to 1
+					children: [
+						{
+							title: "CP4App",
+							path: "/cloudpak/cp4app/overview"
+						},
+						{
+							title: "CP4MM",
+							path: "/cloudpak/cp4mm/overview"
 						}
 					]
 				}
