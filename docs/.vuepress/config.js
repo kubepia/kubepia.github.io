@@ -1,7 +1,7 @@
 module.exports = {
 	base: "/",
 	title: "Kubepia Documents",
-	description: "Technical guidelines about kubernetes",
+	description: "Technical guidelines about kubernetes ",
 	// dest: "./docs",
 	plugins: ["@vuepress/back-to-top"],
 	markdown: {},
@@ -92,7 +92,7 @@ module.exports = {
 					]
 				}
 			],	
-			
+
 			"/cloudpak/": [
 				{
 					title: "CloudPak",
