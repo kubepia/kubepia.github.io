@@ -91,3 +91,15 @@ bastion VM생성 순서를 참조하여 VM들을 생성합니다.
 ![](./img/infra01-14.png) 
 ![](./img/infra01-15.png) 
 
+- **redhat subscription 등록**  
+yum install을 위해서는 redhat subscription을 먼저 등록해야 합니다.  
+각 VM node에서 미리 등록하여 주십시오.  
+redhat subscription등록 방법은 가이드메일을 참조하세요.  
+```
+$ subscription-manager register
+$ subscription-manager refresh
+$ subscription-manager attach --pool=<pool_id>
+```
+![](./img/infra01-16.png)
+
+

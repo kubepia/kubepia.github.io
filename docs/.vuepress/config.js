@@ -128,7 +128,7 @@ module.exports = {
 										{
 											title: "Infra Node-HAProxy서버 설치",
 											path: BASEDIR_CP4APP_INSTALL+"/infra05"
-										},
+										},										
 										{
 											title: "Infra Node-DHCP서버 설치",
 											path: BASEDIR_CP4APP_INSTALL+"/infra06"
