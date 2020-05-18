@@ -99,7 +99,7 @@ module.exports = {
 				{
 					title: "CloudPak",
 					sidebarDepth: 3, // optional, defaults to 1
-					path: "/cloudpak/overview",
+					//path: "/cloudpak/overview",
 					children: [
 						{
 							title: "CP4App",
@@ -107,7 +107,7 @@ module.exports = {
 							children: [
 								{
 									title: "Install",
-									path: BASEDIR_CP4APP_INSTALL+"/install",
+									//path: BASEDIR_CP4APP_INSTALL+"/install",
 									children: [
 										{
 											title: "Infra Node-VM 생성",
@@ -152,6 +152,10 @@ module.exports = {
 						{
 							title: "CP4MM",
 							path: "/cloudpak/cp4mm/overview"
+						},
+						{
+							title: "Markdown sample",
+							path: "/cloudpak/md-sample"
 						}
 					]
 				}
