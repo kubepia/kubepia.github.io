@@ -9,8 +9,8 @@ script:
 deploy:
   provider: pages
   skip_cleanup: true
-  #github_token: $GIT_TOKEN
-  github_token: "f8654705fc9f235ae42e4f241130ff8e11a3b903"
+  github_token: $GIT_TOKEN
+  #github_token: "f8654705fc9f235ae42e4f241130ff8e11a3b903"
   local_dir: docs/.vuepress/dist
   target-branch: master
   on:
