@@ -110,39 +110,39 @@ module.exports = {
 									//path: BASEDIR_CP4APP_INSTALL+"/install",
 									children: [
 										{
-											title: "Infra Server-VM 생성",
+											title: "Infra Servers-VM 생성",
 											path: BASEDIR_CP4APP_INSTALL+"/infra01"
 										},
 										{
-											title: "Infra Server-Web서버 설치",
+											title: "Infra Servers-Web서버 설치",
 											path: BASEDIR_CP4APP_INSTALL+"/infra02"
 										},
 										{
-											title: "Infra Server-VM Network 설정",
+											title: "Infra Servers-VM Network 설정",
 											path: BASEDIR_CP4APP_INSTALL+"/infra03"
 										},
 										{
-											title: "Infra Server-DNS서버 설치",
+											title: "Infra Servers-DNS서버 설치",
 											path: BASEDIR_CP4APP_INSTALL+"/infra04"
 										},
 										{
-											title: "Infra Server-HAProxy서버 설치",
+											title: "Infra Servers-HAProxy서버 설치",
 											path: BASEDIR_CP4APP_INSTALL+"/infra05"
 										},										
 										{
-											title: "Infra Server-DHCP서버 설치",
+											title: "Infra Servers-DHCP서버 설치",
 											path: BASEDIR_CP4APP_INSTALL+"/infra06"
 										},
 										{
-											title: "Infra Server-NFS서버 설치",
+											title: "Infra Servers-NFS서버 설치",
 											path: BASEDIR_CP4APP_INSTALL+"/infra07"
 										},
 										{
-											title: "Infra Server-SSLKey 구성",
+											title: "Infra Servers-SSLKey 구성",
 											path: BASEDIR_CP4APP_INSTALL+"/infra08"
 										},
 										{
-											title: "Infra Server-IPTables 설치",
+											title: "Infra Servers-IPTables 설치",
 											path: BASEDIR_CP4APP_INSTALL+"/infra09"
 										}
 									]
