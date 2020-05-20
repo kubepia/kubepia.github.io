@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Infra Node-VM 생성 | Kubepia Documents</title>
+    <meta name="description" content="Technical guidelines about kubernetes">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    
+    <link rel="preload" href="/assets/css/0.styles.6963f482.css" as="style"><link rel="preload" href="/assets/js/app.3abd61b1.js" as="script"><link rel="preload" href="/assets/js/2.73b27c06.js" as="script"><link rel="preload" href="/assets/js/3.998211c4.js" as="script"><link rel="prefetch" href="/assets/js/10.dff97cf5.js"><link rel="prefetch" href="/assets/js/11.d751b14c.js"><link rel="prefetch" href="/assets/js/12.0f449174.js"><link rel="prefetch" href="/assets/js/13.9a319a8b.js"><link rel="prefetch" href="/assets/js/14.1df3d397.js"><link rel="prefetch" href="/assets/js/15.ce51745b.js"><link rel="prefetch" href="/assets/js/16.9b43b60c.js"><link rel="prefetch" href="/assets/js/17.1428c904.js"><link rel="prefetch" href="/assets/js/18.f4e72054.js"><link rel="prefetch" href="/assets/js/19.a5694e34.js"><link rel="prefetch" href="/assets/js/20.2c99523a.js"><link rel="prefetch" href="/assets/js/21.10afd96e.js"><link rel="prefetch" href="/assets/js/22.d14b0b07.js"><link rel="prefetch" href="/assets/js/23.cd19340f.js"><link rel="prefetch" href="/assets/js/24.498f9ac0.js"><link rel="prefetch" href="/assets/js/25.57cab579.js"><link rel="prefetch" href="/assets/js/26.a7c7c96e.js"><link rel="prefetch" href="/assets/js/27.2f904930.js"><link rel="prefetch" href="/assets/js/28.281871a6.js"><link rel="prefetch" href="/assets/js/29.42c03e77.js"><link rel="prefetch" href="/assets/js/30.6534d045.js"><link rel="prefetch" href="/assets/js/31.e5e649c5.js"><link rel="prefetch" href="/assets/js/32.846e8898.js"><link rel="prefetch" href="/assets/js/33.76d70072.js"><link rel="prefetch" href="/assets/js/34.b1a769a1.js"><link rel="prefetch" href="/assets/js/4.2ce3832e.js"><link rel="prefetch" href="/assets/js/5.812718f0.js"><link rel="prefetch" href="/assets/js/6.79ed5451.js"><link rel="prefetch" href="/assets/js/7.3d6dd100.js"><link rel="prefetch" href="/assets/js/8.0297d5e6.js"><link rel="prefetch" href="/assets/js/9.b6182320.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6963f482.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/kubepia.png" alt="Kubepia Documents" class="logo"> <span class="site-name can-hide">Kubepia Documents</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/devops/overview.html" class="nav-link">
+  DevOps
+</a></div><div class="nav-item"><a href="/k8s/" class="nav-link">
+  K8S
+</a></div><div class="nav-item"><a href="/ocp/overview.html" class="nav-link">
+  OCP4.X
+</a></div><div class="nav-item"><a href="/cloudpak/overview.html" class="nav-link">
+  CloudPak
+</a></div><div class="nav-item"><a href="/architecture/" class="nav-link">
+  Architecture
+</a></div><div class="nav-item"><a href="/aboutus/iamnogada.html" class="nav-link">
+  About US
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/devops/overview.html" class="nav-link">
+  DevOps
+</a></div><div class="nav-item"><a href="/k8s/" class="nav-link">
+  K8S
+</a></div><div class="nav-item"><a href="/ocp/overview.html" class="nav-link">
+  OCP4.X
+</a></div><div class="nav-item"><a href="/cloudpak/overview.html" class="nav-link">
+  CloudPak
+</a></div><div class="nav-item"><a href="/architecture/" class="nav-link">
+  Architecture
+</a></div><div class="nav-item"><a href="/aboutus/iamnogada.html" class="nav-link">
+  About US
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>CloudPak</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-1"><a href="/cloudpak/cp4app/overview" class="sidebar-heading clickable open"><span>CP4App</span> <span class="arrow down"></span></a> <ul class="sidebar-links sidebar-group-items"><li><section class="sidebar-group collapsable is-sub-group depth-2"><p class="sidebar-heading open"><span>Install</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/cloudpak/cp4app/install/infra01.html" class="active sidebar-link">Infra Servers-VM 생성</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/cloudpak/cp4app/install/infra01.html#vm-템플릿-작성" class="sidebar-link">VM 템플릿 작성</a></li><li class="sidebar-sub-header"><a href="/cloudpak/cp4app/install/infra01.html#drs자동화-설정" class="sidebar-link">DRS자동화 설정</a></li><li class="sidebar-sub-header"><a href="/cloudpak/cp4app/install/infra01.html#vm-생성" class="sidebar-link">VM 생성</a></li></ul></li><li><a href="/cloudpak/cp4app/install/infra02.html" class="sidebar-link">Infra Servers-Web서버 설치</a></li><li><a href="/cloudpak/cp4app/install/infra03.html" class="sidebar-link">Infra Servers-VM Network 설정</a></li><li><a href="/cloudpak/cp4app/install/infra04.html" class="sidebar-link">Infra Servers-DNS서버 설치</a></li><li><a href="/cloudpak/cp4app/install/infra05.html" class="sidebar-link">Infra Servers-HAProxy서버 설치</a></li><li><a href="/cloudpak/cp4app/install/infra06.html" class="sidebar-link">Infra Servers-DHCP서버 설치</a></li><li><a href="/cloudpak/cp4app/install/infra07.html" class="sidebar-link">Infra Servers-NFS서버 설치</a></li><li><a href="/cloudpak/cp4app/install/infra08.html" class="sidebar-link">Infra Servers-SSLKey 구성</a></li><li><a href="/cloudpak/cp4app/install/infra09.html" class="sidebar-link">Infra Servers-IPTables 설치</a></li></ul></section></li></ul></section></li><li><a href="/cloudpak/cp4mm/overview.html" class="sidebar-link">CP4MM</a></li><li><a href="/cloudpak/md-sample.html" class="sidebar-link">Markdown sample</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="infra-node-vm-생성"><a href="#infra-node-vm-생성" class="header-anchor">#</a> Infra Node-VM 생성</h1> <h2 id="vm-템플릿-작성"><a href="#vm-템플릿-작성" class="header-anchor">#</a> VM 템플릿 작성</h2> <p>VM을 생성하기 위한 RHEL7 VM템플릿을 먼저 작성합니다.</p> <p><a href="https://blog.inkubate.io/create-a-rhel-7-terraform-template-for-vmware-vsphere/" target="_blank" rel="noopener noreferrer">Create a RHEL 7 Terraform template for VMware vSphere<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></p> <h2 id="drs자동화-설정"><a href="#drs자동화-설정" class="header-anchor">#</a> DRS자동화 설정</h2> <p>Distributed Resource Scheduler는 자동으로 가상머신을 ESXi Host에 분산 배치시켜 주는 기술입니다.<br>
+VM생성을 쉽게 하기 위하여 이 기능을 enable시킵니다.<br>
+DRS가 enable되면 VM생성 시 IP를 지정할 필요가 없습니다.<br>
+가장 적합한 Host에 배치되면서 IP가 할당 됩니다.<br> <img src="/assets/img/infra01-DRS01.0e71c8e4.png" alt=""></p> <p><img src="/assets/img/infra01-DRS02.d6eb1c71.png" alt=""></p> <h2 id="vm-생성"><a href="#vm-생성" class="header-anchor">#</a> VM 생성</h2> <p>Infra node 구성을 위한 VM은 bastion, network, storage, gateway(=iptables)입니다.
+<img src="/assets/img/infra01-architecture.b20e3e73.png" alt=""></p> <p>또한 위 그림과 같이 각 VM node에는 아래와 같은 S/W가 설치됩니다.</p> <table><thead><tr><th style="text-align:left;">VM</th> <th style="text-align:left;">설치 S/W</th></tr></thead> <tbody><tr><td style="text-align:left;">bastion</td> <td style="text-align:left;">Web 서버</td></tr> <tr><td style="text-align:left;">network</td> <td style="text-align:left;">dns, dhcp, haproxy</td></tr> <tr><td style="text-align:left;">storage</td> <td style="text-align:left;">nfs</td></tr> <tr><td style="text-align:left;">gateway</td> <td style="text-align:left;">iptables</td></tr></tbody></table> <p>4개의 VM node를 아래와 같이 생성합니다.</p> <ul><li><p><strong>VMWare vCenter 로그인</strong></p></li> <li><p><strong>VM Template 선택 및 새 VM생성 시작</strong> <img src="/assets/img/infra01-01.27f1ce9d.png" alt=""></p></li> <li><p><strong>VM name입력 및 위치 지정</strong> <img src="/assets/img/infra01-02.cd4ae143.png" alt=""></p></li> <li><p><strong>IP지정</strong><br>
+DRS(Distributed Resource Schedule)가 enable되어 있으므로 아무IP나 선택합니다.
+<img src="/assets/img/infra01-03.d0e91d50.png" alt=""></p></li> <li><p><strong>Storage지정</strong><br>
+미리 구성한 vCenter의 Storage를 선택합니다.
+<img src="/assets/img/infra01-04.cf10bf1f.png" alt=""></p></li> <li><p><strong>옵션지정</strong><br>
+VM template에 이미 적절한 옵션이 지정되어 있으므로 skip해도 됩니다.<br>
+CPU/Mem 조정이 필요하면 'Customize this virtual machine's hardware'를 체크하고 조정하십시오.
+<img src="/assets/img/infra01-05.a3103c53.png" alt=""></p></li> <li><p><strong>최종 검토 및 생성</strong><br>
+최종으로 지정한 내용을 검토하고 이상 없으면 [FINISH]버튼을 클릭하십시오.<br> <img src="/assets/img/infra01-06.f3310492.png" alt=""></p></li> <li><p><strong>VM시작 &amp; Web console 접근</strong><br>
+하단 진행bar에서 VM생성이 완료된것을 확인하고, VM을 시작합니다.<br>
+시작 후에 'Launch Web Console'을 클릭합니다.<br> <img src="/assets/img/infra01-07.934286d3.png" alt=""></p></li> <li><p><strong>Public IP지정</strong><br>
+DRS에 의해 IP가 자동 지정되었겠지만 미리 정한 IP로 변경합니다.
+VM Template에 정의된 root 암호로 로그인 한 후, 아래를 수행합니다.</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ cd /etc/sysconfig/network-scripts
+$ vi ifcfg-ens192
+</code></pre></div><p><img src="/assets/img/infra01-08.96132550.png" alt=""></p> <p>IPADDR값을 변경합니다.<br> <img src="/assets/img/infra01-09.04bb5bd3.png" alt=""></p> <p>network서비스를 재시작하여 변경IP를 반영합니다.</p> <div class="language- extra-class"><pre class="language-text"><code>$ systemctl restart network
+</code></pre></div><p><img src="/assets/img/infra01-10.ec42d7b8.png" alt=""></p> <ul><li><p><strong>Terminal에서 VM접근</strong><br> <img src="/assets/img/infra01-11.5ad400f9.png" alt=""></p></li> <li><p><strong>hostname 변경</strong></p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ hostnamectl set-hostname bastion
+</code></pre></div><p><img src="/assets/img/infra01-12.ff6013be.png" alt=""></p> <ul><li><p><strong>network, storage, gateway VM 생성</strong><br>
+bastion VM생성 순서를 참조하여 VM들을 생성합니다.<br> <img src="/assets/img/infra01-13.e0453364.png" alt=""> <img src="/assets/img/infra01-14.d3489c06.png" alt=""> <img src="/assets/img/infra01-15.7eabfc59.png" alt=""></p></li> <li><p><strong>redhat subscription 등록</strong><br>
+yum install을 위해서는 redhat subscription을 먼저 등록해야 합니다.<br>
+각 VM node에서 미리 등록하여 주십시오.<br>
+redhat subscription등록 방법은 가이드메일을 참조하세요.</p></li></ul> <div class="language- extra-class"><pre class="language-text"><code>$ subscription-manager register
+$ subscription-manager refresh
+$ subscription-manager attach --pool=&lt;pool_id&gt;
+</code></pre></div><p><img src="/assets/img/infra01-16.5a9ae5c5.png" alt=""></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><!----> <span class="next"><a href="/cloudpak/cp4app/install/infra02.html">
+        Infra Servers-Web서버 설치
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.3abd61b1.js" defer></script><script src="/assets/js/2.73b27c06.js" defer></script><script src="/assets/js/3.998211c4.js" defer></script>
+  </body>
+</html>

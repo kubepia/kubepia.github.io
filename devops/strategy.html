@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Deploy Strategy | Kubepia Documents</title>
+    <meta name="description" content="Technical guidelines about kubernetes">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    
+    <link rel="preload" href="/assets/css/0.styles.6963f482.css" as="style"><link rel="preload" href="/assets/js/app.3abd61b1.js" as="script"><link rel="preload" href="/assets/js/2.73b27c06.js" as="script"><link rel="preload" href="/assets/js/4.2ce3832e.js" as="script"><link rel="preload" href="/assets/js/10.dff97cf5.js" as="script"><link rel="prefetch" href="/assets/js/11.d751b14c.js"><link rel="prefetch" href="/assets/js/12.0f449174.js"><link rel="prefetch" href="/assets/js/13.9a319a8b.js"><link rel="prefetch" href="/assets/js/14.1df3d397.js"><link rel="prefetch" href="/assets/js/15.ce51745b.js"><link rel="prefetch" href="/assets/js/16.9b43b60c.js"><link rel="prefetch" href="/assets/js/17.1428c904.js"><link rel="prefetch" href="/assets/js/18.f4e72054.js"><link rel="prefetch" href="/assets/js/19.a5694e34.js"><link rel="prefetch" href="/assets/js/20.2c99523a.js"><link rel="prefetch" href="/assets/js/21.10afd96e.js"><link rel="prefetch" href="/assets/js/22.d14b0b07.js"><link rel="prefetch" href="/assets/js/23.cd19340f.js"><link rel="prefetch" href="/assets/js/24.498f9ac0.js"><link rel="prefetch" href="/assets/js/25.57cab579.js"><link rel="prefetch" href="/assets/js/26.a7c7c96e.js"><link rel="prefetch" href="/assets/js/27.2f904930.js"><link rel="prefetch" href="/assets/js/28.281871a6.js"><link rel="prefetch" href="/assets/js/29.42c03e77.js"><link rel="prefetch" href="/assets/js/3.998211c4.js"><link rel="prefetch" href="/assets/js/30.6534d045.js"><link rel="prefetch" href="/assets/js/31.e5e649c5.js"><link rel="prefetch" href="/assets/js/32.846e8898.js"><link rel="prefetch" href="/assets/js/33.76d70072.js"><link rel="prefetch" href="/assets/js/34.b1a769a1.js"><link rel="prefetch" href="/assets/js/5.812718f0.js"><link rel="prefetch" href="/assets/js/6.79ed5451.js"><link rel="prefetch" href="/assets/js/7.3d6dd100.js"><link rel="prefetch" href="/assets/js/8.0297d5e6.js"><link rel="prefetch" href="/assets/js/9.b6182320.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6963f482.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/kubepia.png" alt="Kubepia Documents" class="logo"> <span class="site-name can-hide">Kubepia Documents</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/devops/overview.html" class="nav-link">
+  DevOps
+</a></div><div class="nav-item"><a href="/k8s/" class="nav-link">
+  K8S
+</a></div><div class="nav-item"><a href="/ocp/overview.html" class="nav-link">
+  OCP4.X
+</a></div><div class="nav-item"><a href="/cloudpak/overview.html" class="nav-link">
+  CloudPak
+</a></div><div class="nav-item"><a href="/architecture/" class="nav-link">
+  Architecture
+</a></div><div class="nav-item"><a href="/aboutus/iamnogada.html" class="nav-link">
+  About US
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/devops/overview.html" class="nav-link">
+  DevOps
+</a></div><div class="nav-item"><a href="/k8s/" class="nav-link">
+  K8S
+</a></div><div class="nav-item"><a href="/ocp/overview.html" class="nav-link">
+  OCP4.X
+</a></div><div class="nav-item"><a href="/cloudpak/overview.html" class="nav-link">
+  CloudPak
+</a></div><div class="nav-item"><a href="/architecture/" class="nav-link">
+  Architecture
+</a></div><div class="nav-item"><a href="/aboutus/iamnogada.html" class="nav-link">
+  About US
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Devops</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/devops/overview.html" class="sidebar-link">Overview</a></li><li><a href="/devops/cicd.html" class="sidebar-link">CICD</a></li><li><a href="/devops/strategy.html" class="active sidebar-link">Deploy Strategy</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/devops/strategy.html#recreate" class="sidebar-link">Recreate</a></li><li class="sidebar-sub-header"><a href="/devops/strategy.html#ramped" class="sidebar-link">Ramped</a></li><li class="sidebar-sub-header"><a href="/devops/strategy.html#blue-green" class="sidebar-link">Blue/Green</a></li><li class="sidebar-sub-header"><a href="/devops/strategy.html#canary" class="sidebar-link">Canary</a></li><li class="sidebar-sub-header"><a href="/devops/strategy.html#request-mapping" class="sidebar-link">Request Mapping</a></li><li class="sidebar-sub-header"><a href="/devops/strategy.html#summary" class="sidebar-link">Summary</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="deploy-strategy"><a href="#deploy-strategy" class="header-anchor">#</a> Deploy Strategy</h1> <div class="custom-block tip"><p class="custom-block-title">TIP</p> <ul><li>Configuration : Ingress &lt;-&gt; Service &lt;-&gt; Deployment  상호 연관 관계</li> <li>[Key]:[Value]  형태로 자유롭게 선언하여, 자원 선택시 Filter로 사용됨</li></ul></div> <p><img src="/assets/img/2020-03-06-11-56-03.6661daf5.png" alt=""></p> <hr> <p></p><div class="table-of-contents"><ul><li><a href="#recreate">Recreate</a></li><li><a href="#ramped">Ramped</a></li><li><a href="#blue-green">Blue/Green</a></li><li><a href="#canary">Canary</a></li><li><a href="#request-mapping">Request Mapping</a></li><li><a href="#summary">Summary</a></li></ul></div><p></p> <hr> <h2 id="recreate"><a href="#recreate" class="header-anchor">#</a> Recreate</h2> <blockquote><p>Application을 중단하고, 새로운 Application을 배포함.</p></blockquote> <table><thead><tr><th style="text-align:left;">Pros</th> <th style="text-align:left;">Cons</th></tr></thead> <tbody><tr><td style="text-align:left;">Easy to setup</td> <td style="text-align:left;">High impact on the user's request. downtime exists</td></tr></tbody></table> <p>Example of yaml(manifest.yaml)</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">[</span> . . . <span class="token punctuation">]</span>
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">3</span>
+  <span class="token key atrule">strategy</span><span class="token punctuation">:</span>
+    <span class="token key atrule">type</span><span class="token punctuation">:</span> Recreate
+<span class="token punctuation">[</span> . . . <span class="token punctuation">]</span>
+</code></pre></div><p>Example of command</p> <div class="language- extra-class"><pre class="language-text"><code>kubectl apply -f ./manifest.yaml
+</code></pre></div><h2 id="ramped"><a href="#ramped" class="header-anchor">#</a> Ramped</h2> <blockquote><p>(aka) : incremental, rolling update
+신규버전의 Application Instance 점진적으로 배포하고, 기존 배포된 버전의 Instance 수를 줄여 가는 배포 방식
+Kubernetes의 History관리를 통해  Rollback 쉽게 처리 할 수 있음</p></blockquote> <table><thead><tr><th style="text-align:left;">Pros</th> <th style="text-align:left;">Cons</th></tr></thead> <tbody><tr><td style="text-align:left;">Easy to setup</td> <td style="text-align:left;">Take time for rollout/rollback</td></tr> <tr><td style="text-align:left;">No downtime</td> <td style="text-align:left;">No control over traffic</td></tr> <tr><td style="text-align:left;">Keep handling ongoing rebalancing of data</td> <td style="text-align:left;"></td></tr></tbody></table> <p>Example of yaml(manifest.yaml)</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">[</span> . . . <span class="token punctuation">]</span>
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Deployment
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">3</span>
+  <span class="token key atrule">strategy</span><span class="token punctuation">:</span>
+    <span class="token key atrule">type</span><span class="token punctuation">:</span> RollingUpdate
+    <span class="token key atrule">rollngUpdate</span><span class="token punctuation">:</span>
+      <span class="token key atrule">maxSurge</span><span class="token punctuation">:</span> <span class="token number">2       </span><span class="token comment"># how many instances(pod) to add at a time</span>
+      <span class="token key atrule">maxUnavailable</span><span class="token punctuation">:</span> <span class="token number">0 </span><span class="token comment"># unavailable number of instances(pod) </span>
+                        <span class="token comment"># can be unavailable during the rolling update</span>
+<span class="token punctuation">[</span> . . . <span class="token punctuation">]</span>
+</code></pre></div><p>Example of command</p> <div class="language- extra-class"><pre class="language-text"><code>kubectl apply -f ./manifest.yaml
+</code></pre></div><p>Traffice
+<img src="/assets/img/2020-03-06-12-01-51.f39b8a03.png" alt=""></p> <h2 id="blue-green"><a href="#blue-green" class="header-anchor">#</a> Blue/Green</h2> <blockquote><p>(aka) : red/black
+신규버전의 Application Instance 배포하고, 기존 Instance에 연결되는 Routing 정보를 신규 Instance로 변경.<br>
+서비스 변경이 완려되면 기존 Instane는 삭제처리함.</p></blockquote> <table><thead><tr><th style="text-align:left;">Pros</th> <th style="text-align:left;">Cons</th></tr></thead> <tbody><tr><td style="text-align:left;">Instant update</td> <td style="text-align:left;">Expensive, need double the resources</td></tr> <tr><td style="text-align:left;">Good for frontend</td> <td style="text-align:left;">Should proper test of the entire platform before releasing</td></tr></tbody></table> <p>Example of yaml(manifest-v2.yaml)</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token punctuation">[</span> . . . <span class="token punctuation">]</span>
+<span class="token key atrule">kind</span><span class="token punctuation">:</span> Service
+<span class="token key atrule">spec</span><span class="token punctuation">:</span>
+<span class="token comment"># Match both the app and the version</span>
+<span class="token comment"># When switch traffic, update the label version with v2.0.0 for version 1.0.0</span>
+  <span class="token key atrule">selector</span><span class="token punctuation">:</span>
+    <span class="token key atrule">app</span><span class="token punctuation">:</span> my<span class="token punctuation">-</span>app
+    <span class="token key atrule">version</span><span class="token punctuation">:</span> v1.0.0
+<span class="token punctuation">[</span> . . . <span class="token punctuation">]</span>
+</code></pre></div><p>Example of command</p> <div class="language- extra-class"><pre class="language-text"><code>kubectl apply -f ./manifest-v2.yaml
+kubectl patch service my-app -p \
+   '{&quot;spec&quot;: {&quot;selector&quot;: {&quot;version&quot;: &quot;v2.0.0&quot;}}}'
+kubectl delete -f manifest-v1.yaml
+</code></pre></div><p>Traffic
+<img src="/assets/img/2020-03-06-12-02-15.b4d9e9ec.png" alt=""></p> <h2 id="canary"><a href="#canary" class="header-anchor">#</a> Canary</h2> <blockquote><p>Ramped 배포 방식과 유사하나, Instance 일부를 선배포하고, 검증 이후에
+잔여 instance 모두를 배포하는 방식
+선배포 검증에 실패할 경우 기존 Instance로 Rollback 처리함.</p></blockquote> <table><thead><tr><th style="text-align:left;">Pros</th> <th style="text-align:left;">Cons</th></tr></thead> <tbody><tr><td style="text-align:left;">Verison released for a subset of users</td> <td style="text-align:left;">Slow</td></tr> <tr><td style="text-align:left;">Convenient for error rate and performance</td> <td style="text-align:left;">Sticky sesisons might be required</td></tr> <tr><td style="text-align:left;">Fast rollback</td> <td style="text-align:left;">need traffic control required like <em>istio</em> or <em>linkerd</em></td></tr></tbody></table> <table><thead><tr><th style="text-align:center;">1</th> <th style="text-align:center;"><img src="/assets/img/2020-03-06-12-02-49.f80de4ff.png" alt=""></th></tr></thead> <tbody><tr><td style="text-align:center;">2</td> <td style="text-align:center;"><img src="/assets/img/2020-03-06-12-03-04.648b3293.png" alt=""></td></tr> <tr><td style="text-align:center;">3</td> <td style="text-align:center;"><img src="/assets/img/2020-03-06-12-03-19.37b6f7b8.png" alt=""></td></tr></tbody></table> <p>Traffic
+<img src="/assets/img/2020-03-06-12-05-23.cf155b87.png" alt=""></p> <h2 id="request-mapping"><a href="#request-mapping" class="header-anchor">#</a> Request Mapping</h2> <blockquote><p>Canary 배포와 같이 여러종류의 version을 배포하고, 요청되는 http의 header 정보를 활용하여 version을 선책해서 처리하는 방식.<br>
+A/B Test와 같이 Production 환경에서 실사용자 대상으로 기능 또는 마케팅을 검증하고 선별적인 서비스를 제공하기 위한 배포 기술임.\</p></blockquote> <div class="custom-block danger"><p class="custom-block-title">조건</p> <p>A/B Test를 위해서는 service controll을 위한 service mesh(istio, kong etc) 기능을 추가로 설치해야함</p></div> <p><img src="/assets/img/2020-03-06-12-11-17.0f0a0a28.png" alt=""></p> <h2 id="summary"><a href="#summary" class="header-anchor">#</a> Summary</h2> <ul><li>recreate if downtime is not a problem</li> <li>recreate and ramped doesn’t require any extra step (kubectl apply is enough)</li> <li>ramped and blue/green deployment are usually a good fit and easy to use</li> <li>blue/green is a good fit for front-end that load versioned assets from the same server</li> <li>blue/green and shadow can be expensive</li> <li>canary and a/b testing should be used if little confidence on the quality of the release</li> <li>canary, a/b testing and shadow might require additional cluster component</li></ul> <hr> <p></p><div class="table-of-contents"><ul><li><a href="#recreate">Recreate</a></li><li><a href="#ramped">Ramped</a></li><li><a href="#blue-green">Blue/Green</a></li><li><a href="#canary">Canary</a></li><li><a href="#request-mapping">Request Mapping</a></li><li><a href="#summary">Summary</a></li></ul></div> <div id="disqus_thread"></div><p></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/devops/cicd.html" class="prev">
+        CICD
+      </a></span> <span class="next"><a href="/devops/overview.html">
+        DevOps
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.3abd61b1.js" defer></script><script src="/assets/js/2.73b27c06.js" defer></script><script src="/assets/js/4.2ce3832e.js" defer></script><script src="/assets/js/10.dff97cf5.js" defer></script>
+  </body>
+</html>

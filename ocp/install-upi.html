@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Install-UPI | Kubepia Documents</title>
+    <meta name="description" content="Technical guidelines about kubernetes">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
+  <link rel="manifest" href="/assets/favicons/site.webmanifest">
+    
+    <link rel="preload" href="/assets/css/0.styles.6963f482.css" as="style"><link rel="preload" href="/assets/js/app.3abd61b1.js" as="script"><link rel="preload" href="/assets/js/2.73b27c06.js" as="script"><link rel="preload" href="/assets/js/6.79ed5451.js" as="script"><link rel="prefetch" href="/assets/js/10.dff97cf5.js"><link rel="prefetch" href="/assets/js/11.d751b14c.js"><link rel="prefetch" href="/assets/js/12.0f449174.js"><link rel="prefetch" href="/assets/js/13.9a319a8b.js"><link rel="prefetch" href="/assets/js/14.1df3d397.js"><link rel="prefetch" href="/assets/js/15.ce51745b.js"><link rel="prefetch" href="/assets/js/16.9b43b60c.js"><link rel="prefetch" href="/assets/js/17.1428c904.js"><link rel="prefetch" href="/assets/js/18.f4e72054.js"><link rel="prefetch" href="/assets/js/19.a5694e34.js"><link rel="prefetch" href="/assets/js/20.2c99523a.js"><link rel="prefetch" href="/assets/js/21.10afd96e.js"><link rel="prefetch" href="/assets/js/22.d14b0b07.js"><link rel="prefetch" href="/assets/js/23.cd19340f.js"><link rel="prefetch" href="/assets/js/24.498f9ac0.js"><link rel="prefetch" href="/assets/js/25.57cab579.js"><link rel="prefetch" href="/assets/js/26.a7c7c96e.js"><link rel="prefetch" href="/assets/js/27.2f904930.js"><link rel="prefetch" href="/assets/js/28.281871a6.js"><link rel="prefetch" href="/assets/js/29.42c03e77.js"><link rel="prefetch" href="/assets/js/3.998211c4.js"><link rel="prefetch" href="/assets/js/30.6534d045.js"><link rel="prefetch" href="/assets/js/31.e5e649c5.js"><link rel="prefetch" href="/assets/js/32.846e8898.js"><link rel="prefetch" href="/assets/js/33.76d70072.js"><link rel="prefetch" href="/assets/js/34.b1a769a1.js"><link rel="prefetch" href="/assets/js/4.2ce3832e.js"><link rel="prefetch" href="/assets/js/5.812718f0.js"><link rel="prefetch" href="/assets/js/7.3d6dd100.js"><link rel="prefetch" href="/assets/js/8.0297d5e6.js"><link rel="prefetch" href="/assets/js/9.b6182320.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.6963f482.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/assets/img/kubepia.png" alt="Kubepia Documents" class="logo"> <span class="site-name can-hide">Kubepia Documents</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/devops/overview.html" class="nav-link">
+  DevOps
+</a></div><div class="nav-item"><a href="/k8s/" class="nav-link">
+  K8S
+</a></div><div class="nav-item"><a href="/ocp/overview.html" class="nav-link">
+  OCP4.X
+</a></div><div class="nav-item"><a href="/cloudpak/overview.html" class="nav-link">
+  CloudPak
+</a></div><div class="nav-item"><a href="/architecture/" class="nav-link">
+  Architecture
+</a></div><div class="nav-item"><a href="/aboutus/iamnogada.html" class="nav-link">
+  About US
+</a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link">
+  Home
+</a></div><div class="nav-item"><a href="/devops/overview.html" class="nav-link">
+  DevOps
+</a></div><div class="nav-item"><a href="/k8s/" class="nav-link">
+  K8S
+</a></div><div class="nav-item"><a href="/ocp/overview.html" class="nav-link">
+  OCP4.X
+</a></div><div class="nav-item"><a href="/cloudpak/overview.html" class="nav-link">
+  CloudPak
+</a></div><div class="nav-item"><a href="/architecture/" class="nav-link">
+  Architecture
+</a></div><div class="nav-item"><a href="/aboutus/iamnogada.html" class="nav-link">
+  About US
+</a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>Openshift4.x</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/ocp/overview.html" class="sidebar-link">Overview</a></li><li><a href="/ocp/install-upi.html" class="active sidebar-link">Install-UPI</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ocp/install-upi.html#preparation" class="sidebar-link">Preparation</a></li><li class="sidebar-sub-header"><a href="/ocp/install-upi.html#setup-web-server" class="sidebar-link">Setup Web server</a></li><li class="sidebar-sub-header"><a href="/ocp/install-upi.html#manifest-생성" class="sidebar-link">manifest 생성</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ocp/install-upi.html#create-file-install-config-yaml" class="sidebar-link">create file : install-config.yaml</a></li><li class="sidebar-sub-header"><a href="/ocp/install-upi.html#ignition-file-생성" class="sidebar-link">ignition file 생성</a></li></ul></li><li class="sidebar-sub-header"><a href="/ocp/install-upi.html#vm-생성-vshpere" class="sidebar-link">vm 생성(vshpere)</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/ocp/install-upi.html#template-생성" class="sidebar-link">Template 생성</a></li><li class="sidebar-sub-header"><a href="/ocp/install-upi.html#bootsrap-vm-from-template" class="sidebar-link">Bootsrap VM from Template</a></li><li class="sidebar-sub-header"><a href="/ocp/install-upi.html#cluster-생성-확인-방법" class="sidebar-link">Cluster 생성 확인 방법</a></li></ul></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="install-upi"><a href="#install-upi" class="header-anchor">#</a> Install-UPI</h1> <h2 id="preparation"><a href="#preparation" class="header-anchor">#</a> Preparation</h2> <ul><li>Get subscription (login 필요) from <a href="https://cloud.redhat.com/openshift/install/vsphere/user-provisioned" target="_blank" rel="noopener noreferrer">redhat<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li>Get quay.io pull secret from <a href="https://cloud.redhat.com/openshift/install/vsphere/user-provisioned" target="_blank" rel="noopener noreferrer">redhat<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></li> <li>ssh key 생성 : ssh-keygen -t rsa -b 4096 -N '' -C [kubepia]</li> <li>download : openshift-installer, RHCOS</li> <li>동일한 Subnet으로 필요한 VM 구성 후 필요 소프트웨어 설치/설정 : DNS, Web, HAProxy, DHCP</li></ul> <h2 id="setup-web-server"><a href="#setup-web-server" class="header-anchor">#</a> Setup Web server</h2> <blockquote><p>Use bastion server
+Install httpd or nginx</p></blockquote> <h2 id="manifest-생성"><a href="#manifest-생성" class="header-anchor">#</a> manifest 생성</h2> <h3 id="create-file-install-config-yaml"><a href="#create-file-install-config-yaml" class="header-anchor">#</a> create file : install-config.yaml</h3> <div class="language-yml extra-class"><pre class="language-yml"><code><span class="token key atrule">apiVersion</span><span class="token punctuation">:</span> v1
+<span class="token key atrule">baseDomain</span><span class="token punctuation">:</span> darumtech.net
+<span class="token key atrule">compute</span><span class="token punctuation">:</span>
+<span class="token punctuation">-</span> <span class="token key atrule">hyperthreading</span><span class="token punctuation">:</span> Enabled
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> worker
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">3</span>
+<span class="token key atrule">controlPlane</span><span class="token punctuation">:</span>
+  <span class="token key atrule">hyperthreading</span><span class="token punctuation">:</span> Enabled
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> master
+  <span class="token key atrule">replicas</span><span class="token punctuation">:</span> <span class="token number">3</span>
+<span class="token key atrule">metadata</span><span class="token punctuation">:</span>
+  <span class="token key atrule">name</span><span class="token punctuation">:</span> hcp
+<span class="token key atrule">platform</span><span class="token punctuation">:</span>
+  <span class="token key atrule">vsphere</span><span class="token punctuation">:</span>
+    <span class="token key atrule">vcenter</span><span class="token punctuation">:</span> 192.168.0.70
+    <span class="token key atrule">username</span><span class="token punctuation">:</span> administrator@vsphere.local
+    <span class="token key atrule">password</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>password for vshpere<span class="token punctuation">]</span>
+    <span class="token key atrule">datacenter</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>name of data center<span class="token punctuation">]</span>
+    <span class="token key atrule">defaultDatastore</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>name of data store<span class="token punctuation">]</span>
+<span class="token key atrule">fips</span><span class="token punctuation">:</span> <span class="token boolean important">false</span>
+</code></pre></div><h3 id="ignition-file-생성"><a href="#ignition-file-생성" class="header-anchor">#</a> ignition file 생성</h3> <ul><li>backup install-config.yaml</li> <li>mkdir install path : /install/config<div class="language-shell extra-class"><pre class="language-shell"><code>openshift-install create ignition-configs --dir<span class="token operator">=</span>/install/config
+</code></pre></div></li> <li>generated : auth  bootstrap.ign  install-config.yaml.org  master.ign  metadata.json  worker.ign</li> <li>create append for bootstrap : append-boostrap.ign<div class="language-json extra-class"><pre class="language-json"><code><span class="token punctuation">{</span>
+  <span class="token property">&quot;ignition&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">&quot;config&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+      <span class="token property">&quot;append&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+        <span class="token punctuation">{</span>
+          <span class="token property">&quot;source&quot;</span><span class="token operator">:</span> <span class="token string">&quot;http://[webserver url]/install/bootstrap.ign&quot;</span><span class="token punctuation">,</span>
+          <span class="token property">&quot;verification&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+        <span class="token punctuation">}</span>
+      <span class="token punctuation">]</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;timeouts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token property">&quot;version&quot;</span><span class="token operator">:</span> <span class="token string">&quot;2.1.0&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;networkd&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;passwd&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;storage&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">&quot;systemd&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>copy to web server(/[webroot]/install) : append-bootstrap.ign  bootstrap.ign  master.ign  worker.ign</li> <li>encode for vmware configuration : append-bootstrap.64, master.64, worker.64<div class="language-shell extra-class"><pre class="language-shell"><code><span class="token keyword">for</span> <span class="token for-or-select variable">i</span> <span class="token keyword">in</span> append-bootstrap master worker
+ <span class="token keyword">do</span>
+ base64 -w0 <span class="token operator">&lt;</span> <span class="token variable">$i</span>.ign <span class="token operator">&gt;</span> <span class="token variable">$i</span>.64
+<span class="token keyword">done</span>
+</code></pre></div></li></ul> <h2 id="vm-생성-vshpere"><a href="#vm-생성-vshpere" class="header-anchor">#</a> vm 생성(vshpere)</h2> <h3 id="template-생성"><a href="#template-생성" class="header-anchor">#</a> Template 생성</h3> <blockquote><p>Use Thin Provision
+Use downloaded RHCOS*.ova</p></blockquote> <p><img src="/assets/img/2020-04-01-16-21-53.b2ec7ad2.png" alt=""></p> <h3 id="bootsrap-vm-from-template"><a href="#bootsrap-vm-from-template" class="header-anchor">#</a> Bootsrap VM from Template</h3> <ol><li>폴더 선택
+<img src="/assets/img/2020-04-01-16-25-01.4fce3264.png" alt=""></li> <li>Resource 설정
+<img src="/assets/img/2020-04-01-16-25-44.19e6c4ce.png" alt=""> <img src="/assets/img/2020-04-01-16-26-48.2d02f18d.png" alt=""></li> <li>HW 설정 : DHCP 에서 설정된 MAC 주소를 지정해야함
+<img src="/assets/img/2020-04-01-16-28-29.4d9530fb.png" alt=""></li> <li>VM Option
+<img src="/assets/img/2020-04-01-16-29-21.69bb09ff.png" alt=""> <ol><li>Parameter 추가 : guestinfo.ignition.config
+<ul><li>bootstrap: append-bootstrap.64 파일 내용</li> <li>master : master.64 파일내용</li> <li>worker : worker.64 파일내용</li></ul></li> <li>Parameter 추가 : guestinfo.ignition.config.data.encoding
+<blockquote><p>base64</p></blockquote></li> <li>Parameter 추가 : disk.EnableUUID
+<blockquote><p>TRUE
+<img src="/assets/img/2020-04-01-16-31-22.919b19ab.png" alt=""></p></blockquote></li></ol></li> <li>master 3대, worker 반복</li></ol> <h3 id="cluster-생성-확인-방법"><a href="#cluster-생성-확인-방법" class="header-anchor">#</a> Cluster 생성 확인 방법</h3> <div class="language-shell extra-class"><pre class="language-shell"><code>openshift-install --dir<span class="token operator">=</span>/install/config wait-for bootstrap-complete --log-level<span class="token operator">=</span>debug
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/ocp/overview.html" class="prev">
+        Overview
+      </a></span> <span class="next"><a href="/devops/cicd.html">
+        CICD
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><!----></div></div>
+    <script src="/assets/js/app.3abd61b1.js" defer></script><script src="/assets/js/2.73b27c06.js" defer></script><script src="/assets/js/6.79ed5451.js" defer></script>
+  </body>
+</html>
