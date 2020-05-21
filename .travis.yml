@@ -1,3 +1,4 @@
+# travis는 git action으로 대체되어 더 이상 사용 안함
 language: node_js
 node_js:
   - "12"
