@@ -1,6 +1,6 @@
 # Markdown sample
 ---
-:::tip TASK DESCIRIPTION
+:::tip TASK DESCRIPTION
 Markdown에 대한 예제입니다.  
 [[toc]]
 :::
