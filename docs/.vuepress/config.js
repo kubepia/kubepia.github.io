@@ -144,6 +144,20 @@ module.exports = {
 										{
 											title: "Infra Servers-iptables 설치",
 											path: BASEDIR_CP4APP_INSTALL+"/infra09"
+										},
+										{
+											title: "OCP-ignition파일 및 VM생성",
+											path: BASEDIR_CP4APP_INSTALL+"/ocp01"
+										},
+										{
+											title: "OCP-OCP설치",
+											path: BASEDIR_CP4APP_INSTALL+"/ocp02"
+										},										{
+											title: "OCP-NFS Dynamic provisioning",
+											path: BASEDIR_CP4APP_INSTALL+"/ocp03"
+										},										{
+											title: "OCP-Local Image Registry 구성",
+											path: BASEDIR_CP4APP_INSTALL+"/ocp04"
 										}
 									]
 								}

@@ -10,11 +10,10 @@
 - iptables 설치
 
 # OCP 설치
-- Ignition 파일 생성
-- Node VM 생성
+- ignition파일 및 VM생성
 - OCP 설치
-- Local Image Registry 구성
 - NFS Dynamic provisioning
+- Local Image Registry 구성
 
 # CP4App 설치
 - LDAP 설치
