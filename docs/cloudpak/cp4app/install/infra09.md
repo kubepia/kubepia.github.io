@@ -86,5 +86,5 @@ $ systemctl start iptables
 ![](./img/2020-05-25-01-18-14.png)
 
 **이상으로 Infra Servers설치를 완료하였습니다.**
-**이제 OCP설치를 진행하십시오.**
+
 
