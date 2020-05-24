@@ -1,4 +1,8 @@
-# Infra Node-VM 생성
+# Infra Servers-VM 생성
+:::tip TASK DESCRIPTION
+내외부연결(bastion), 네트워크, 스토리지, NAT서버 설치를 위한 VM을 생성합니다.
+[[toc]] 
+:::
 
 ## VM 템플릿 작성
 VM을 생성하기 위한 RHEL7 VM템플릿을 먼저 작성합니다.    

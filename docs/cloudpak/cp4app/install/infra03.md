@@ -1,7 +1,12 @@
-# Infra Node-VM Network 설정
+# Infra Servers-VM Network 설정
+
+:::tip TASK DESCRIPTION
+Infra VM의 네트워크를 설정합니다.
+[[toc]] 
+:::
 
 각 VM의 Private IP(172.168.0.*)를 지정합니다.   
-아래 작업을 각 VM node에서 수행하십시오.  
+아래 작업을 각 VM에서 수행하십시오.  
 
 ## Private Network adapter 추가
 - **Edit Setting클릭**  

@@ -1,6 +1,11 @@
-# Infra Node-Web서버 설치
+# Infra Servers-Web서버 설치
+:::tip TASK DESCRIPTION
+설치파일을 업로드/다운로드할 Web서버를 설치합니다.
+[[toc]] 
+:::
 
 - **apache web server설치**  
+bastion VM에서 수행합니다. 
 ```
 $ yum install -y httpd
 ```
