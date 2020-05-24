@@ -152,12 +152,30 @@ module.exports = {
 										{
 											title: "OCP-OCP설치",
 											path: BASEDIR_CP4APP_INSTALL+"/ocp02"
-										},										{
+										},										
+										{
 											title: "OCP-NFS Dynamic provisioning",
 											path: BASEDIR_CP4APP_INSTALL+"/ocp03"
-										},										{
+										},										
+										{
 											title: "OCP-Local Image Registry 구성",
 											path: BASEDIR_CP4APP_INSTALL+"/ocp04"
+										},
+										{
+											title: "CP4App-LDAP 설치",
+											path: BASEDIR_CP4APP_INSTALL+"/cp4app01"
+										},
+										{
+											title: "CP4App-Common Service 설치",
+											path: BASEDIR_CP4APP_INSTALL+"/cp4app02"
+										},
+										{
+											title: "CP4App-OCP IdP로 등록",
+											path: BASEDIR_CP4APP_INSTALL+"/cp4app03"
+										},
+										{
+											title: "CP4App-CP4App 설치",
+											path: BASEDIR_CP4APP_INSTALL+"/cp4app04"
 										}
 									]
 								}
