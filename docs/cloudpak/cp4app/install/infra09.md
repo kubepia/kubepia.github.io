@@ -1,3 +1,3 @@
-# Infra Node-IPTables 설치
+# Infra Servers-IPTables 설치
 
 
