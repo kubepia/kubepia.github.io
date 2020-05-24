@@ -142,7 +142,7 @@ module.exports = {
 											path: BASEDIR_CP4APP_INSTALL+"/infra08"
 										},
 										{
-											title: "Infra Servers-IPTables 설치",
+											title: "Infra Servers-iptables 설치",
 											path: BASEDIR_CP4APP_INSTALL+"/infra09"
 										}
 									]

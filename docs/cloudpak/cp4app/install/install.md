@@ -7,7 +7,7 @@
 - DHCP 설치
 - NFS서버 설치
 - SSL Key 구성
-- IPTables 설치
+- iptables 설치
 
 # OCP 설치
 - Ignition 파일 생성
