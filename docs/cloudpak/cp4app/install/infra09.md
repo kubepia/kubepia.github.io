@@ -85,4 +85,3 @@ $ systemctl start iptables
 ```
 ![](./img/2020-05-25-01-18-14.png)
 
-
