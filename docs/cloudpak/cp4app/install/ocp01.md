@@ -242,6 +242,7 @@ $ base64 -w0 <installation_directory>/append-bootstrap.ign > <installation_direc
   ![](./img/2020-05-25-23-02-59.png)
 
 ## Bootstrap Node VM 생성
+bootstrap node VM을 생성합니다.  
 
 ## Master Node VM 생성
 
