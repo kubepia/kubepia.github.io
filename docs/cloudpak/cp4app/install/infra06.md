@@ -45,3 +45,6 @@ $ systemctl start dhcpd
 $ systemctl status dhcpd
 ```
 ![](./img/infra06-04.png)
+
+---
+<disqus/>

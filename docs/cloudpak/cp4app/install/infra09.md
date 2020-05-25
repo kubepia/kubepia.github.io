@@ -88,3 +88,5 @@ $ systemctl start iptables
 **이상으로 Infra Servers설치를 완료하였습니다.**
 **이제 OCP설치를 진행하십시오.**
 
+---
+<disqus/>

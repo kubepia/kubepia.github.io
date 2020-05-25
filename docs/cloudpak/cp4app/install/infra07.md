@@ -84,3 +84,6 @@ $ rm -rf <temp directory>
 ```
 ![](./img/infra07-10.png)
 ![](./img/infra07-11.png)
+
+---
+<disqus/>

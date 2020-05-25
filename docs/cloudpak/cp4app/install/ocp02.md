@@ -86,3 +86,6 @@ OCP Web console로 로그인합니다.
 | 주소 | https://console-openshift-console.apps.[cluster name].[base domain] | https://console-openshift-console.apps.hcp.kubepia.com |
 | username | kubeadmin | - |
 | password | bastion VM의 [install directory]/config/auth/kubeadmin-password파일 참조 | 생략  |
+
+---
+<disqus/>

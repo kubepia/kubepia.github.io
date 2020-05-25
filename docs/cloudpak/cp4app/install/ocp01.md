@@ -311,4 +311,5 @@ Master node VM생성단계를 참고하여 Bootstrap node VM들을 생성합니�
 
 **※ Infra VM들은 중지하고 Snapshot을 생성하셔야 빠르게 snapshot이 만들어집니다.** 
 
-
+---
+<disqus/>

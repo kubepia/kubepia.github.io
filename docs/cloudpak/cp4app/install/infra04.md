@@ -104,6 +104,8 @@ $ nslookup
 모든 설정 주소에 대해 확인합니다.  
 ![](./img/infra04-17.png)
 
+---
+<disqus/>
 
 
 

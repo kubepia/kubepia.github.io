@@ -106,4 +106,5 @@ $ subscription-manager attach --pool=<pool_id>
 ```
 ![](./img/infra01-16.png)
 
-
+---
+<disqus/>

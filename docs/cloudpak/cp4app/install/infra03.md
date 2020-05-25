@@ -47,6 +47,8 @@ DNS서버는 network VM에 설치할 예정이므로, network VM의 private IP�
 $ systemctl restart network
 ```
 
+---
+<disqus/>
 
 
 

@@ -44,6 +44,8 @@ $ systemctl status haproxy
 클러스터 외부에 있는 유선네트워크장치 또는 무선공유기(iptime)에서 6443, 22623, 80, 443포트에 대해  
 haproxy서버로 포트 forward설정을 합니다.  
 
+---
+<disqus/>
 
 
 
