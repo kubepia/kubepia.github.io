@@ -241,10 +241,74 @@ $ base64 -w0 <installation_directory>/append-bootstrap.ign > <installation_direc
   - 생성된 VM선택->우측마우스메뉴에서 'Template->Convert to template'클릭  
   ![](./img/2020-05-25-23-02-59.png)
 
-## Bootstrap Node VM 생성
-bootstrap node VM을 생성합니다.  
-
 ## Master Node VM 생성
+Master node VM을 생성합니다.  
+- **VM template 선택 -> 우측마우스메뉴에서 'New VM from This Template'클릭**  
+![](./img/2020-05-25-23-12-11.png)
+- **VM의 이름과 folder를 지정**  
+![](./img/2020-05-25-23-15-29.png)
+> **VM이름** \
+VM이름의 규칙은 없지만 헷갈리지 않도록 [dhcpd.conf파일에 지정](https://kubepia.github.io/cloudpak/cp4app/install/infra06.html#dhcp%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98)한 이름을 참조하여 작명하십시오.  
+- **'Compute resource'는 아무거나 지정하면 됨**  
+[DRS-Distributed Resources Scheduler](https://kubepia.github.io/cloudpak/cp4app/install/infra01.html#drs%EC%9E%90%EB%8F%99%ED%99%94-%EC%84%A4%EC%A0%95)를 이용하므로 자동으로 IP가 부여됨  
+![](./img/2020-05-25-23-28-01.png) 
+- **Storage선택**  
+![](./img/2020-05-25-23-30-50.png)
+- **'Customize this virtual machine's hardware'체크**  
+![](./img/2020-05-25-23-31-34.png)
+- **CPU/MEM/Disk 지정**  
+[System requirements](https://kubepia.github.io/cloudpak/cp4app/install/ocp01.html#%EC%82%AC%EC%A0%84%EC%A4%80%EB%B9%84)를 참조하여 지정하세요.  
+메모리 항목을 펼치고 'Reservation'을 동일하게 바꿔 주십시오.  
+![](./img/2020-05-25-23-33-25.png)
+- **Network MAC Address지정**  
+Network Adapter1을 펼치고 MAC Address항목의 'Automatic'을 'Manual'로 변경하십시오.  
+MAC Address는 Network VM의 /etc/dhcpd.conf에 정의한 MAC주소를 입력하십시오.  
+[dhcpd.conf파일 설정](https://kubepia.github.io/cloudpak/cp4app/install/infra06.html#dhcp%EC%84%9C%EB%B2%84-%EC%84%A4%EC%B9%98)을 참고 하십시오.  
+![](./img/2020-05-25-23-39-27.png)
+- **ignition내용 셋팅**  
+RHCOS부팅시에 참조할 ignition값을 파라미터로 셋팅합니다.  
+  - 'VM Options'탭을 클릭하고 'Configuration Parameters'의 [EDIT CONFIGURATION]을 클릭하십시오.  
+  ![](./img/2020-05-25-23-43-15.png)
+  - [Add Configuration Params]버튼을 클릭하여 파라미터를 추가  
+  
+  | 파라미터 | 값  |
+  |:-------|:---|
+  | guestinfo.ignition.config.data | master.64파일 내용 |
+  | guestinfo.ignition.config.data.encoding | base64 |
+  | disk.EnableUUID | TRUE |
+  ![](./img/2020-05-25-23-51-53.png)
+- **설정내용 최종검토**  
+최종 검토 후 [FINISH]버튼을 클릭합니다.  
+![](./img/2020-05-25-23-52-59.png)
+
+:::tip 모든 Master node VM 생성
+VM이름과 MAC Address만 다르게 하여 나머지 Master Node VM들을 생성합니다.
+:::
 
 ## Worker Node VM 생성
+:::tip Worker node VM 생성
+Master node VM생성단계를 참고하여 모든 Worker node VM들을 생성합니다.  
+단, 아래 단계에서는 Worker node에 맞게 변경하여야 합니다.  
+- VM의 이름과 folder를 지정   
+- CPU/MEM/Disk 지정  
+- Network MAC Address지정  
+- ignition내용 셋팅: worker.64파일 내용으로 셋팅
+:::
+
+## Bootstrap Node VM 생성
+:::tip Bootstrap node VM 생성
+Master node VM생성단계를 참고하여 Bootstrap node VM들을 생성합니다.  
+단, 아래 단계에서는 Bootstrap node에 맞게 변경하여야 합니다.  
+- VM의 이름과 folder를 지정   
+- CPU/MEM/Disk 지정  
+- Network MAC Address지정  
+- ignition내용 셋팅: append-bootstrap.64파일 내용으로 셋팅
+:::
+
+## Snapshot 만들기   
+지금까지 작업한 내용을 백업하기 위해 각 VM의 Snapshot을 생성합니다.  
+![](./img/2020-05-26-00-04-28.png)
+
+**※ Infra VM들은 중지하고 Snapshot을 생성하셔야 빠르게 snapshot이 만들어집니다.** 
+
 
