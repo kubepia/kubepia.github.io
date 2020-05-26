@@ -11,6 +11,11 @@ OCP를 최초 설치할때는 내부 TLS통신을 위해 임시 key파일을 사
 [[toc]] 
 :::
 
+:::tip
+설치 시 [screen: 가상터미널을 이용한 백그라운드 명령 실행](https://happycloud-lee.tistory.com/119)을 이용하여 보십시오.  
+실수나 네트워크 단절로 Terminal이 끊어져도 안전하게 설치를 진행할 수 있습니다.   
+:::
+
 ## bootstrap, Master node VM 부팅
 VM을 부팅시키면 ignition설정에 의해 설치가 자동으로 시작됩니다.  
 bootstrap VM부터 먼저 시작합니다.  

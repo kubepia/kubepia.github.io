@@ -15,6 +15,11 @@ IBM Common Service IAM에 대한 설명, 설치, 구성에 대해서는 아래 �
 [[toc]] 
 :::
 
+:::tip
+설치 시 [screen: 가상터미널을 이용한 백그라운드 명령 실행](https://happycloud-lee.tistory.com/119)을 이용하여 보십시오.  
+실수나 네트워크 단절로 Terminal이 끊어져도 안전하게 설치를 진행할 수 있습니다.   
+:::
+
 아래 작업은 Cluster api-server에 접근할 수 있는 Terminal 또는 bastion서버에서 수행합니다.   
 
 ## LDAP서버 설치 및 user/group추가
@@ -322,7 +327,7 @@ user1을 LDAP에 등록 후 Common Service로 로그인하려고 하면
 '사용자를 생성할 수 없다'라는 에러가 납니다.  
 
 **Identities값 초기화는 YAML을 편집하여 identities의 값을 'null'로 변경하면 됩니다.**  
- 
+
 ![](./img/2020-05-26-22-45-24.png)
 ::: 
 
