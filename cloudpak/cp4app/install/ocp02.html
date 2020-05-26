@@ -11,7 +11,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/favicon-16x16.png">
   <link rel="manifest" href="/assets/favicons/site.webmanifest">
     
-    <link rel="preload" href="/assets/css/0.styles.6963f482.css" as="style"><link rel="preload" href="/assets/js/app.8786a00d.js" as="script"><link rel="preload" href="/assets/js/2.b3f4226b.js" as="script"><link rel="preload" href="/assets/js/5.8f00c3ad.js" as="script"><link rel="preload" href="/assets/js/18.68711b68.js" as="script"><link rel="prefetch" href="/assets/js/10.b32e5ab3.js"><link rel="prefetch" href="/assets/js/11.85403d52.js"><link rel="prefetch" href="/assets/js/12.8ebc2840.js"><link rel="prefetch" href="/assets/js/13.d7d57884.js"><link rel="prefetch" href="/assets/js/14.71695b28.js"><link rel="prefetch" href="/assets/js/15.6066460c.js"><link rel="prefetch" href="/assets/js/16.049cbb37.js"><link rel="prefetch" href="/assets/js/17.342f78aa.js"><link rel="prefetch" href="/assets/js/19.b8de6ff5.js"><link rel="prefetch" href="/assets/js/20.75aa5e5a.js"><link rel="prefetch" href="/assets/js/21.f2143941.js"><link rel="prefetch" href="/assets/js/22.f83d2aa2.js"><link rel="prefetch" href="/assets/js/23.b4c8570e.js"><link rel="prefetch" href="/assets/js/24.a4ede37d.js"><link rel="prefetch" href="/assets/js/25.51dec269.js"><link rel="prefetch" href="/assets/js/26.4763898b.js"><link rel="prefetch" href="/assets/js/27.3faee679.js"><link rel="prefetch" href="/assets/js/28.b9519f66.js"><link rel="prefetch" href="/assets/js/29.ffbb2824.js"><link rel="prefetch" href="/assets/js/3.1c7c6d82.js"><link rel="prefetch" href="/assets/js/30.8235d0ca.js"><link rel="prefetch" href="/assets/js/31.53b6eeb8.js"><link rel="prefetch" href="/assets/js/32.b85ef9ed.js"><link rel="prefetch" href="/assets/js/33.dad79803.js"><link rel="prefetch" href="/assets/js/34.7a7a2bcb.js"><link rel="prefetch" href="/assets/js/35.c886ce6e.js"><link rel="prefetch" href="/assets/js/36.fa9a265e.js"><link rel="prefetch" href="/assets/js/37.42c74729.js"><link rel="prefetch" href="/assets/js/38.415148d7.js"><link rel="prefetch" href="/assets/js/39.c467ba47.js"><link rel="prefetch" href="/assets/js/4.95957294.js"><link rel="prefetch" href="/assets/js/40.8223636f.js"><link rel="prefetch" href="/assets/js/6.983ac552.js"><link rel="prefetch" href="/assets/js/7.09252b31.js"><link rel="prefetch" href="/assets/js/8.4f9397bc.js"><link rel="prefetch" href="/assets/js/9.74aefa82.js">
+    <link rel="preload" href="/assets/css/0.styles.6963f482.css" as="style"><link rel="preload" href="/assets/js/app.7cc9b812.js" as="script"><link rel="preload" href="/assets/js/2.1c3bfc04.js" as="script"><link rel="preload" href="/assets/js/5.b159b5f1.js" as="script"><link rel="preload" href="/assets/js/19.1b0a5b5b.js" as="script"><link rel="prefetch" href="/assets/js/10.dd634139.js"><link rel="prefetch" href="/assets/js/11.290367eb.js"><link rel="prefetch" href="/assets/js/12.fc5bf5ab.js"><link rel="prefetch" href="/assets/js/13.7a7ff2e3.js"><link rel="prefetch" href="/assets/js/14.c116b2b3.js"><link rel="prefetch" href="/assets/js/15.c9ece38b.js"><link rel="prefetch" href="/assets/js/16.9f493893.js"><link rel="prefetch" href="/assets/js/17.82d0476b.js"><link rel="prefetch" href="/assets/js/18.77b5ec2f.js"><link rel="prefetch" href="/assets/js/20.7bd2d8ae.js"><link rel="prefetch" href="/assets/js/21.e18dfd2d.js"><link rel="prefetch" href="/assets/js/22.6f3c0af3.js"><link rel="prefetch" href="/assets/js/23.1248d882.js"><link rel="prefetch" href="/assets/js/24.1d4627da.js"><link rel="prefetch" href="/assets/js/25.b4d8802a.js"><link rel="prefetch" href="/assets/js/26.d52227d1.js"><link rel="prefetch" href="/assets/js/27.bcd920c2.js"><link rel="prefetch" href="/assets/js/28.a5d8838d.js"><link rel="prefetch" href="/assets/js/29.e6d608f2.js"><link rel="prefetch" href="/assets/js/3.14cf1724.js"><link rel="prefetch" href="/assets/js/30.14a789d4.js"><link rel="prefetch" href="/assets/js/31.39676924.js"><link rel="prefetch" href="/assets/js/32.279b9126.js"><link rel="prefetch" href="/assets/js/33.2d27ddcb.js"><link rel="prefetch" href="/assets/js/34.72467de3.js"><link rel="prefetch" href="/assets/js/35.cc687f72.js"><link rel="prefetch" href="/assets/js/36.86182e2c.js"><link rel="prefetch" href="/assets/js/37.e920e07c.js"><link rel="prefetch" href="/assets/js/38.a10197b4.js"><link rel="prefetch" href="/assets/js/39.6f8efe99.js"><link rel="prefetch" href="/assets/js/4.1a5cc816.js"><link rel="prefetch" href="/assets/js/40.8223636f.js"><link rel="prefetch" href="/assets/js/6.48fdfa83.js"><link rel="prefetch" href="/assets/js/7.ed0595be.js"><link rel="prefetch" href="/assets/js/8.2e2bbe9c.js"><link rel="prefetch" href="/assets/js/9.187ce03f.js">
     <link rel="stylesheet" href="/assets/css/0.styles.6963f482.css">
   </head>
   <body>
@@ -71,7 +71,38 @@ $ oc adm certificate approve &lt;csr_name&gt;
 
 모든 CSR승인
 $ oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}}{{&quot;\n&quot;}}{{end}}{{end}}' | xargs oc adm certificate approve
-</code></pre></div><p><img src="/assets/img/2020-05-26-00-46-55.c7ff85ed.png" alt=""></p> <p><img src="/assets/img/2020-05-26-00-47-13.4edb84e9.png" alt=""></p> <h2 id="최종-확인"><a href="#최종-확인" class="header-anchor">#</a> 최종 확인</h2> <p>node들의 상태를 확인합니다.<br> <img src="/assets/img/2020-05-26-00-48-58.762bf86b.png" alt=""></p> <p>OCP Web console로 로그인합니다.</p> <table><thead><tr><th style="text-align:left;">항목</th> <th style="text-align:left;">설명</th> <th style="text-align:left;">예</th></tr></thead> <tbody><tr><td style="text-align:left;">주소</td> <td style="text-align:left;">https://console-openshift-console.apps.[cluster name].[base domain]</td> <td style="text-align:left;">https://console-openshift-console.apps.hcp.kubepia.com</td></tr> <tr><td style="text-align:left;">username</td> <td style="text-align:left;">kubeadmin</td> <td style="text-align:left;">-</td></tr> <tr><td style="text-align:left;">password</td> <td style="text-align:left;">bastion VM의 [install directory]/config/auth/kubeadmin-password파일 참조</td> <td style="text-align:left;">생략</td></tr></tbody></table> <hr> <div id="disqus_thread"></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+</code></pre></div><p><img src="/assets/img/2020-05-26-00-46-55.c7ff85ed.png" alt=""></p> <p><img src="/assets/img/2020-05-26-00-47-13.4edb84e9.png" alt=""></p> <h2 id="최종-확인"><a href="#최종-확인" class="header-anchor">#</a> 최종 확인</h2> <p>node들의 상태를 확인합니다.<br> <img src="/assets/img/2020-05-26-00-48-58.762bf86b.png" alt=""></p> <p>아래 리스트가 OCP의 Cluster Component들입니다.<br>
+이 기본 Component들은 Cluster Operator로 설치됩니다.<br>
+모든 Component의 Avaiable상태가 True가 될때까지 기다립니다.</p> <div class="language- extra-class"><pre class="language-text"><code>$ watch -n5 oc get clusteroperators
+※ clusteroperators는 약어인 co를 사용해도 됩니다.  
+
+NAME                                 VERSION   AVAILABLE   PROGRESSING   DEGRADED   SINCE
+authentication                       4.3.0     True        False         False      69s
+cloud-credential                     4.3.0     True        False         False      12m
+cluster-autoscaler                   4.3.0     True        False         False      11m
+console                              4.3.0     True        False         False      46s
+dns                                  4.3.0     True        False         False      11m
+image-registry                       4.3.0     True        False         False      5m26s
+ingress                              4.3.0     True        False         False      5m36s
+kube-apiserver                       4.3.0     True        False         False      8m53s
+kube-controller-manager              4.3.0     True        False         False      7m24s
+kube-scheduler                       4.3.0     True        False         False      12m
+machine-api                          4.3.0     True        False         False      12m
+machine-config                       4.3.0     True        False         False      7m36s
+marketplace                          4.3.0     True        False         False      7m54m
+monitoring                           4.3.0     True        False         False      7h54s
+network                              4.3.0     True        False         False      5m9s
+node-tuning                          4.3.0     True        False         False      11m
+openshift-apiserver                  4.3.0     True        False         False      11m
+openshift-controller-manager         4.3.0     True        False         False      5m943s
+openshift-samples                    4.3.0     True        False         False      3m55s
+operator-lifecycle-manager           4.3.0     True        False         False      11m
+operator-lifecycle-manager-catalog   4.3.0     True        False         False      11m
+service-ca                           4.3.0     True        False         False      11m
+service-catalog-apiserver            4.3.0     True        False         False      5m26s
+service-catalog-controller-manager   4.3.0     True        False         False      5m25s
+storage                              4.3.0     True        False         False      5m30s
+</code></pre></div><p>OCP Web console로 로그인합니다.</p> <table><thead><tr><th style="text-align:left;">항목</th> <th style="text-align:left;">설명</th> <th style="text-align:left;">예</th></tr></thead> <tbody><tr><td style="text-align:left;">주소</td> <td style="text-align:left;">https://console-openshift-console.apps.[cluster name].[base domain]</td> <td style="text-align:left;">https://console-openshift-console.apps.hcp.kubepia.com</td></tr> <tr><td style="text-align:left;">username</td> <td style="text-align:left;">kubeadmin</td> <td style="text-align:left;">-</td></tr> <tr><td style="text-align:left;">password</td> <td style="text-align:left;">bastion VM의 [install directory]/config/auth/kubeadmin-password파일 참조</td> <td style="text-align:left;">생략</td></tr></tbody></table> <hr> <div id="disqus_thread"></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
       ←
       <a href="/cloudpak/cp4app/install/ocp01.html" class="prev">
         OCP-ignition파일 및 VM생성
@@ -80,6 +111,6 @@ $ oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}
       </a>
       →
     </span></p></div> </main></div><div class="global-ui"><!----></div></div>
-    <script src="/assets/js/app.8786a00d.js" defer></script><script src="/assets/js/2.b3f4226b.js" defer></script><script src="/assets/js/5.8f00c3ad.js" defer></script><script src="/assets/js/18.68711b68.js" defer></script>
+    <script src="/assets/js/app.7cc9b812.js" defer></script><script src="/assets/js/2.1c3bfc04.js" defer></script><script src="/assets/js/5.b159b5f1.js" defer></script><script src="/assets/js/19.1b0a5b5b.js" defer></script>
   </body>
 </html>
