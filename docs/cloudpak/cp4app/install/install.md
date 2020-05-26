@@ -11,7 +11,7 @@
 
 # OCP 설치
 - [ignition파일 및 VM생성](https://kubepia.github.io/cloudpak/cp4app/install/ocp01.html)
-- [OCP 설치](https://kubepia.github.io/cloudpak/cp4app/install/ocp2.html)
+- [OCP 설치](https://kubepia.github.io/cloudpak/cp4app/install/ocp02.html)
 - [Local Image Registry 구성](https://kubepia.github.io/cloudpak/cp4app/install/ocp03.html)
 - [NFS Dynamic provisioning](https://kubepia.github.io/cloudpak/cp4app/install/ocp04.html)
 - [IdP 추가](https://kubepia.github.io/cloudpak/cp4app/install/ocp05.html)

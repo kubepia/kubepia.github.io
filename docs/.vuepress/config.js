@@ -107,7 +107,7 @@ module.exports = {
 							children: [
 								{
 									title: "Install",
-									//path: BASEDIR_CP4APP_INSTALL+"/install",
+									path: BASEDIR_CP4APP_INSTALL+"/install",
 									children: [
 										{
 											title: "Infra Servers-VM 생성",
