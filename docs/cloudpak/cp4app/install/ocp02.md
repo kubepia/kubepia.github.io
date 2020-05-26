@@ -85,6 +85,41 @@ $ oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}
 node들의 상태를 확인합니다.  
 ![](./img/2020-05-26-00-48-58.png)
 
+아래 리스트가 OCP의 Cluster Component들입니다.  
+이 기본 Component들은 Cluster Operator로 설치됩니다.  
+모든 Component의 Avaiable상태가 True가 될때까지 기다립니다.  
+```
+$ watch -n5 oc get clusteroperators
+※ clusteroperators는 약어인 co를 사용해도 됩니다.  
+
+NAME                                 VERSION   AVAILABLE   PROGRESSING   DEGRADED   SINCE
+authentication                       4.3.0     True        False         False      69s
+cloud-credential                     4.3.0     True        False         False      12m
+cluster-autoscaler                   4.3.0     True        False         False      11m
+console                              4.3.0     True        False         False      46s
+dns                                  4.3.0     True        False         False      11m
+image-registry                       4.3.0     True        False         False      5m26s
+ingress                              4.3.0     True        False         False      5m36s
+kube-apiserver                       4.3.0     True        False         False      8m53s
+kube-controller-manager              4.3.0     True        False         False      7m24s
+kube-scheduler                       4.3.0     True        False         False      12m
+machine-api                          4.3.0     True        False         False      12m
+machine-config                       4.3.0     True        False         False      7m36s
+marketplace                          4.3.0     True        False         False      7m54m
+monitoring                           4.3.0     True        False         False      7h54s
+network                              4.3.0     True        False         False      5m9s
+node-tuning                          4.3.0     True        False         False      11m
+openshift-apiserver                  4.3.0     True        False         False      11m
+openshift-controller-manager         4.3.0     True        False         False      5m943s
+openshift-samples                    4.3.0     True        False         False      3m55s
+operator-lifecycle-manager           4.3.0     True        False         False      11m
+operator-lifecycle-manager-catalog   4.3.0     True        False         False      11m
+service-ca                           4.3.0     True        False         False      11m
+service-catalog-apiserver            4.3.0     True        False         False      5m26s
+service-catalog-controller-manager   4.3.0     True        False         False      5m25s
+storage                              4.3.0     True        False         False      5m30s
+```
+
 OCP Web console로 로그인합니다. 
 | 항목 | 설명 | 예 |
 |:--------- |:-------------|:----------|

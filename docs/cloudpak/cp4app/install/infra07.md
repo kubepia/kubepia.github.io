@@ -30,19 +30,30 @@ $ chmod -R 777 /nfs
 
 - **/etc/exports파일에 volume directory를 추가합니다.**  
 ![](./img/infra07-06.png)
-> **참고**\
-각 디렉토리의 옵션은 아래와 같습니다.\
-    - ro : 읽기 전용\
-    - rw : 읽기 및 쓰기 가능\  
-    - no_root_squash : 클라이언트쪽 root도 서버쪽 root와 같은권한 가짐\  
-    - no_all_squash : root이외 모든사용자에대해 UID가 같으면 같은 권한을가짐\  
-    - sync : 서버와 클라이언트사이에 sync를 맞춤\  
-    - insecure : 인증안되도 접속허가\  
-    - fsid: file storage id  
+> **참고**  
+각 디렉토리의 옵션은 아래와 같습니다.  
+    - ro : 읽기 전용  
+    - rw : 읽기 및 쓰기 가능  
+    - no_root_squash : 클라이언트쪽 root도 서버쪽 root와 같은권한 가짐  
+    - no_all_squash : root이외 모든사용자에대해 UID가 같으면 같은 권한을가짐  
+    - sync : 서버와 클라이언트사이에 sync를 맞춤  
+    - no_wdelay: OCP Local Image Registry용 PV디렉토리는 지정 필요   
+    - insecure : 인증 안되도 접속허가  
+    - fsid: file storage id
 
-:::tip **중요**
-fsid를 동일한 번호로 지정하면 먼저 지정된 디렉토리에 무조건 PV가 생성됩니다.  
-fsid를 다른 번호로 지정하거나 아예 fsid를 지정하지 마십시오.
+:::tip 중요
+- fsid  
+  exports파일에서 fsid를 동일한 번호로 지정하지 마십시오.  
+  PV생성 시 디렉토리를 지정하여도 동일fsid중 위에 지정된 디렉토리에 무조건 PV가 생성됩니다.  
+  fsid를 다른 번호로 지정하거나 아예 fsid를 지정하지 마십시오.
+- no_wdelay  
+  OCP Local Image Registry용 PV디렉토리는 이 옵션 지정해야 복수개의 Image Registry Pod를 배포할 수 있음
+```
+$ cat /etc/exports
+/nfs/imgreg *(rw,sync,no_wdelay,no_root_squash,insecure,fsid=0)
+$ exportfs -rv
+exporting *:/mnt/data
+```
 :::
 
 ## NFS서버 시작
