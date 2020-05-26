@@ -1,11 +1,10 @@
-# OCP-Local Image Registry 구성
+# OCP-NFS Dynamic provisioning
 
 :::tip TASK DESCRIPTION
 ddd
 
 [[toc]] 
 :::
-
 
 ---
 <disqus/>

@@ -12,13 +12,11 @@
 # OCP 설치
 - ignition파일 및 VM생성
 - OCP 설치
-- NFS Dynamic provisioning
 - Local Image Registry 구성
+- NFS Dynamic provisioning
 
 # CP4App 설치
-- LDAP 설치
 - Common Service 설치
-- OCP IdP로 등록
 - CP4App 설치
 
 
