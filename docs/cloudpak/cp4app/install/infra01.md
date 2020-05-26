@@ -105,15 +105,16 @@ redhat subscription등록 방법은 가이드메일을 참조하세요.
 전체 subscription 추가  
 $ subscription-manager register --username [username] --password [password] --auto-attach
 
-subscription별 추가  
-$ subscription-manager register --username [username] --password [password] 
-$ subscription-manager list --available
-$ subscription-manager register
-$ subscription-manager refresh
+subscription별 추가: list에서 Pool ID확인하여 추가함    
+$ subscription-manager register --username [username] --password [password]
 $ subscription-manager list --available
 $ subscription-manager attach --pool=<POOL ID>
+
+참고: subscription refresh  
+$ subscription-manager refresh
 ```
 ![](./img/infra01-16.png)
+
 
 - **방화벽 중지**  
 필요한 포트 오픈을 해줘야 하는데 테스트 환경이라면 방화벽을 내려서 모든 포트를 허용합니다.  

@@ -162,6 +162,10 @@ module.exports = {
 											path: BASEDIR_CP4APP_INSTALL+"/ocp04"
 										},										
 										{
+											title: "OCP-IdP 추가",
+											path: BASEDIR_CP4APP_INSTALL+"/ocp05"
+										},	
+										{
 											title: "CP4App-Common Service 설치",
 											path: BASEDIR_CP4APP_INSTALL+"/cp4app01"
 										},

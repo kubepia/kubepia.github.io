@@ -163,9 +163,5 @@ Pod가 정상적으로 실행되는지 확인합니다.
 $ oc get po -n openshift-image-registry
 ```
 
-
-
-
-
 ---
 <disqus/>
