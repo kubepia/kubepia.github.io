@@ -56,9 +56,36 @@ $ vi <Forard DNS 설정파일>
 | DNS서버 주소 | ns |
 | Web서버 주소 | www |
 
+```
+SAMPLE 
 
-![](./img/infra04-14.png)
-
+@ IN SOA @ cp.darumtech.net. (
+                    3 ; serial
+                    1D ; refresh
+                    1H ; retry
+                    1W ; expire
+                    3H ) ; minimum
+        IN NS cp.darumtech.net.
+        IN A 172.168.0.189
+cp.darumtech.net. IN A 172.168.0.189
+api.cp.darumtech.net. IN A 172.168.0.189
+api-int.cp.darumtech.net. IN A 172.168.0.189
+*.apps.cp.darumtech.net. IN A 172.168.0.189
+bootstrap.cp.darumtech.net. IN A 172.168.0.180
+master-0.cp.darumtech.net. IN A 172.168.0.186
+master-1.cp.darumtech.net. IN A 172.168.0.185
+master-2.cp.darumtech.net. IN A 172.168.0.184
+worker-1.cp.darumtech.net. IN A 172.168.0.183
+worker-2.cp.darumtech.net. IN A 172.168.0.182
+etcd-0.cp.darumtech.net. IN A 172.168.0.186
+etcd-1.cp.darumtech.net. IN A 172.168.0.185
+etcd-2.cp.darumtech.net. IN A 172.168.0.184
+_etcd-server-ssl._tcp.cp.darumtech.net. IN SRV 0 10 2380 etcd-0.cp.darumtech.net.
+_etcd-server-ssl._tcp.cp.darumtech.net. IN SRV 0 10 2380 etcd-1.cp.darumtech.net.
+_etcd-server-ssl._tcp.cp.darumtech.net. IN SRV 0 10 2380 etcd-2.cp.darumtech.net.
+ns IN A 172.168.0.189
+www IN A 172.168.0.189
+```
 ## Reverse DNS 설정
 Reverse DNS설정파일을 작성합니다. DNS설정파일은 /var/named에 생성합니다.  
 ```
@@ -76,7 +103,29 @@ $ vi <Reverse DNS 설정파일>
 | master nodes | 186, 185, 184 |
 | worker nodes | 183, 182 |
 
-![](./img/infra04-15.png)
+```
+SAMPLE
+
+$TTL 300
+@ IN SOA @ cp.darumtech.net. (
+                    0 ; serial
+                    1D ; refresh
+                    1H ; retry
+                    1H ; retry
+                    1W ; expire
+                 3H ) ; minimum
+        IN NS cp.darumtech.net.
+        IN A 172.168.0.189
+189 IN PTR cp.darumtech.net.
+189 IN PTR api.cp.darumtech.net.
+189 IN PTR api-int.cp.darumtech.net.
+180 IN PTR bootstrap.cp.darumtech.net.
+186 IN PTR master-0.cp.darumtech.net.
+185 IN PTR master-1.cp.darumtech.net.
+184 IN PTR master-2.cp.darumtech.net.
+183 IN PTR worker-1.cp.darumtech.net.
+182 IN PTR worker-2.cp.darumtech.net.
+```
 
 ## DNS서버 시작
 ```

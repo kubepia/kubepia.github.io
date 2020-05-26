@@ -27,6 +27,61 @@ $ vi haproxy.conf
 L/B node는 ingress controller 서비스가 수행되고 있는 worker node에 대해서만 설정하면 됩니다.  
 ![](./img/infra05-04.png)
 
+```
+SAMPLE
+
+listen stats
+ bind :9000
+ mode http
+ stats enable
+ stats uri /
+ monitor-uri /healthz
+frontend openshift-api-server
+ bind *:6443
+ default_backend openshift-api-server
+ mode tcp
+ option tcplog
+backend openshift-api-server
+ balance source
+mode tcp
+ server bootstrap 172.168.0.180:6443 check
+ server master-0 172.168.0.186:6443 check
+ server master-1 172.168.0.185:6443 check
+ server master-2 172.168.0.184:6443 check
+frontend machine-config-server
+bind *:22623
+ default_backend machine-config-server
+ mode tcp
+ option tcplog
+backend machine-config-server
+ balance source
+ mode tcp
+ server bootstrap 172.168.0.180:22623 check
+ server master-0 172.168.0.186:22623 check
+ server master-1 172.168.0.185:22623 check
+ server master-2 172.168.0.184:22623 check
+frontend ingress-http
+ bind *:80
+ default_backend ingress-http
+ mode tcp
+ option tcplog
+backend ingress-http
+ balance source
+ mode tcp
+ server worker-1 172.168.0.183:80 check
+ server worker-2 172.168.0.182:80 check
+frontend ingress-https
+ bind *:443
+ default_backend ingress-https
+ mode tcp
+ option tcplog
+backend ingress-https
+ balance source
+ mode tcp
+ server worker-1 172.168.0.183:443 check
+ server worker-2 172.168.0.182:443 check
+```
+
 ## HAProxy서버 시작
 ```
 HAProxy서버를 부팅시 자동 시작하도록 등록
