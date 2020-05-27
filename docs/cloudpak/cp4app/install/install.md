@@ -34,4 +34,7 @@ IBM에 책임을 물으시면 안됩니다.
 - [Common Service 설치](https://kubepia.github.io/cloudpak/cp4app/install/cp4app01.html)
 - [CP4App 설치](https://kubepia.github.io/cloudpak/cp4app/install/cp4app02.html)
 
+---
+<disqus/>
+
 
