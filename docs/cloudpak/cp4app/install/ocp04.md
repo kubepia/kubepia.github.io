@@ -201,7 +201,7 @@ $ vi test-claim.yaml
 apiVersion: "v1"
 kind: "PersistentVolumeClaim"
 metadata:
-  name: "test-pvc"
+  name: "test-claim"
 spec:
   accessModes:
     - ReadWriteMany
@@ -250,7 +250,7 @@ $ oc apply -f test-pod.yaml
 - **mount 확인**
   - nfs server의 nfs path로 이동  
   - pvc명으로 자동 생성된 디렉토리 확인  
-  - 디렉토리 하위에 /mnt/SUCCESS파일 있는지 확인  
-​
+  - 디렉토리 하위에 SUCCESS파일 있는지 확인 
+​    ![](./img/2020-05-29-05-42-09.png)
 ---
 <disqus/>
