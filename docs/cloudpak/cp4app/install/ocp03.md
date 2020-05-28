@@ -11,25 +11,6 @@ Local Image Registry구성이 안되면 OCP자체의 CI/CD를 사용할수가 �
 Local image registry는 image-registry라는 cluster operator로 설치됩니다.    
 ![](./img/2020-05-26-11-47-21.png)
 
-최초 설치 시 Image registry Pod는 내부 임시 volume을 이용하여 실행되어 있습니다.  
-그러나 이 Pod는 사용할수가 없기 때문에 삭제하고 재구성하여야 합니다.  
-
-- **실행중인 Pod가 있는지 확인합니다.**    
-```
-$ oc get pod -n openshift-image-registry
-```
-
-![](./img/2020-05-26-11-53-44.png)
-
-- **image-registry operator의 설정을 편집하여 Pod를 삭제합니다.**  
-```
-$ oc edit configs.imageregistry.operator.openshift.io
-```
-managementState값을 Managed로 바꾸고 저장합니다.  
-그리고, 다시 들어와서 Removed로 바꾸고 저장합니다.  
-Removed로 바꾸면 Pod가 삭제되는대 기본값이 Removed이기 때문에 값을 한번 변경하여 삭제하는것입니다.  
-![](./img/2020-05-26-12-02-19.png)
-
 ## StorageClass 생성
 vmware의 기본 Storageclass인 thin의 accessMode는 ReadWriteOnce만 지원합니다.  
 ![](./img/2020-05-26-14-28-18.png)
@@ -134,7 +115,7 @@ $ oc get pvc -n openshift-image-registry
 ## image registry POD생성
 - **imageregistry config 변경**  
 ```
-storage.pvc이름 셋팅  
+- storage.pvc이름 셋팅  
 $ oc edit configs.imageregistry.operator.openshift.io -o yaml  
 ...  
 storage:  
@@ -143,11 +124,12 @@ storage:
 ...  
 
 
-managementState를 Managed로 변경  
+- managementState를 Managed로 변경    
 ```
 ![](./img/2020-05-26-15-43-32.png)
 
 ![](./img/2020-05-26-15-42-13.png)
+
 
 image-registry cluster-operator의 상태를 확인합니다.  
 ```
@@ -162,6 +144,7 @@ Pod가 정상적으로 실행되는지 확인합니다.
 ```
 $ oc get po -n openshift-image-registry
 ```
+![](./img/2020-05-29-04-42-15.png)
 
 ---
 <disqus/>

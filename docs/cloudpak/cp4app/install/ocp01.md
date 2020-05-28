@@ -19,6 +19,8 @@ vSphere 6.5상에도 설치가능하지만 vSphere Version 6.7 U2이상을 권�
 - **RHCOS VM Template**  
 2020-05-29일 현재 vmware상에서는 RHCOS4.3.0으로 VM Template을 만드십시오.  
 그 이상의 버전으로 만든 VM Template을 이용하면 설치가 되지 않습니다.  
+RHCOS 4.3.0을 이용하여 설치하여도 OCP버전은 가장 최신 버전이 설치됩니다.  
+![](./img/2020-05-29-04-45-52.png)
 
 - **System requirements**
 문서상의 최소 사양은 아래와 같습니다.  
