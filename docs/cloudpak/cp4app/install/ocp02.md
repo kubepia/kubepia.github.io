@@ -18,8 +18,8 @@ OCP를 최초 설치할때는 내부 TLS통신을 위해 임시 key파일을 사
 
 ## bootstrap, Master node VM 부팅
 VM을 부팅시키면 ignition설정에 의해 설치가 자동으로 시작됩니다.  
-bootstrap VM부터 먼저 시작합니다.  
 
+- **bootstrap VM부터 먼저 시작합니다.**  
 
 bootstrap의 로그를 보고 정상적으로 올라오면 Master VM들을 부팅합니다.  
 bootstrap으로 접근하여 설치 로그를 봅니다.  
@@ -67,7 +67,10 @@ bastion의 ~/.ssh/id_rsa.pub의 내용과 install-config.yaml백업본의 내용
     이 경우는 [install-config.yaml파일 생성](https://kubepia.github.io/cloudpak/cp4app/install/ocp01.html#install-config-yaml-%EC%83%9D%EC%84%B1)단계로 돌아가셔서 다시 시작하십시오. 
 :::
 
+- **Master Node 실행**  
+bootstrap node가 정상적으로 실행되면, Master node를 실행합니다.  
 
+- **Worker Node 실행**  
 Worker VM들은 Master node의 상태가 Ready가 된 후에 시작하십시오.  
 ![](./img/2020-05-26-00-11-22.png)
 
