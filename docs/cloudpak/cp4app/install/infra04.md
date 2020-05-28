@@ -114,24 +114,23 @@ $ vi <Reverse DNS 설정파일>
 SAMPLE
 
 $TTL 300
-@ IN SOA @ cp.darumtech.net. (
-                    0 ; serial
-                    1D ; refresh
-                    1H ; retry
-                    1H ; retry
-                    1W ; expire
-                 3H ) ; minimum
-        IN NS cp.darumtech.net.
-        IN A 172.168.0.189
-189 IN PTR cp.darumtech.net.
-189 IN PTR api.cp.darumtech.net.
-189 IN PTR api-int.cp.darumtech.net.
-180 IN PTR bootstrap.cp.darumtech.net.
-186 IN PTR master-0.cp.darumtech.net.
-185 IN PTR master-1.cp.darumtech.net.
-184 IN PTR master-2.cp.darumtech.net.
-183 IN PTR worker-1.cp.darumtech.net.
-182 IN PTR worker-2.cp.darumtech.net.
+@       IN SOA  @ cp.kubepia.com. (
+                                        0      ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+          IN  NS      cp.kubepia.com.
+             IN  A      172.168.0.189
+189                      IN      PTR           cp.kubepia.com.
+189                      IN      PTR           api.cp.kubepia.com.
+189                      IN      PTR           api-int.cp.kubepia.com.
+180                      IN      PTR           bootstrap.cp.kubepia.com.
+186                      IN      PTR           master-0.cp.kubepia.com.
+185                      IN      PTR           master-1.cp.kubepia.com.
+184                      IN      PTR           master-2.cp.kubepia.com.
+183                      IN      PTR           worker-1.cp.kubepia.com.
+182                      IN      PTR           worker-2.cp.kubepia.com.
 ```
 
 ## DNS서버 시작
@@ -146,6 +145,12 @@ $ systemctl start named
 $ systemctl status named
 ```
 ![](./img/infra04-18.png)
+
+> **TIP**  
+DNS서버 시작 시 에러가 나면 파일 내용에 이상한 문자가 들어가서일 수 있습니다.  
+/var/named디렉토리에 있는 named.localhost는 zone파일 sample이고,  
+named.loopback은 reverse파일 sample이니  
+그 파일을 복사해서 내용을 편집하십시오.  
 
 ## DNS설정 검증
 bastion, network, storage, gateway VM에서 VM설정을 확인합니다. 
