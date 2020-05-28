@@ -86,6 +86,13 @@ _etcd-server-ssl._tcp.cp.darumtech.net. IN SRV 0 10 2380 etcd-2.cp.darumtech.net
 ns IN A 172.168.0.189
 www IN A 172.168.0.189
 ```
+> **TIP**  
+위 sample로 파일을 만든 후 아래와 같이 문자열을 일괄 변경할 수 있습니다.  
+```
+sed -i'' "s/darumtech.net/kubepia.com/g" ./kubepia.com.zone
+```
+
+
 ## Reverse DNS 설정
 Reverse DNS설정파일을 작성합니다. DNS설정파일은 /var/named에 생성합니다.  
 ```
