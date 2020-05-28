@@ -180,6 +180,28 @@ base64 encoding한 값을 셋팅할 수 없습니다.
 그래서 bootstrap.ign파일을 Web서버에 업로드하고,  
 그 주소를 지정한 append-bootstrap.ign파일을 생성하여 셋팅합니다.  
 
+- **bootstrap.ign파일을 Web서버에 복사**  
+bootstrap VM에 [Web서버가 설치](https://kubepia.github.io/cloudpak/cp4app/install/infra02.html)되어 있습니다.  
+home디렉토리인 /var/www/html하위에 install디렉토리를 만들고 bootstrap.ign파일을 복사합니다.    
+
+```
+예시)
+
+[root@bastion config]# mkdir -p /var/www/html/install
+[root@bastion config]# cp bootstrap.ign /var/www/html/install
+[root@bastion config]# ls -al /var/www/html/install
+total 304
+drwxr-xr-x. 2 root root     27 May 28 17:03 .
+drwxr-xr-x. 3 root root     38 May 28 17:03 ..
+-rw-r-----. 1 root root 308269 May 28 17:03 bootstrap.ign
+
+COPY후 mode를 변경하고 curl로 접근을 확인합니다.  
+[root@bastion config]# chmod 777 /var/www/html/install/*
+[root@bastion config]# curl http://172.168.0.190/install/bootstrap.ign
+
+```
+
+- **append-bootstrap.ign 생성**  
 ```
 {
   "ignition": {
@@ -201,11 +223,6 @@ base64 encoding한 값을 셋팅할 수 없습니다.
 }
 ```
 
-- bootstrap VM에 [Web서버가 설치](https://kubepia.github.io/cloudpak/cp4app/install/infra02.html)되어 있습니다.  
-home디렉토리인 /var/www/html하위에 install디렉토리를 만들고 bootstrap.ign파일을 복사합니다.    
-![](./img/2020-05-25-21-27-39.png)
-
-- 아래 예제와 같이 bootstrap.ign파일의 주소를 지정합니다.  
 ![](./img/2020-05-25-21-20-31.png)
 
 ## ignition파일 base64 encoding
@@ -214,6 +231,12 @@ base64 encoding한 ignition파일들을 생성합니다.
 $ base64 -w0 <installation_directory>/master.ign > <installation_directory>/master.64
 $ base64 -w0 <installation_directory>/worker.ign > <installation_directory>/worker.64
 $ base64 -w0 <installation_directory>/append-bootstrap.ign > <installation_directory>/append-bootstrap.64
+
+예시)
+$ base64 -w0 /install/config/master.ign > /install/config/master.64
+$ base64 -w0 /install/config/worker.ign > /install/config/worker.64
+$ base64 -w0 /install/config/append-bootstrap.ign > /install/config/append-bootstrap.64
+
 ```
 
 ![](./img/2020-05-25-21-28-11.png)
@@ -229,14 +252,8 @@ $ base64 -w0 <installation_directory>/append-bootstrap.ign > <installation_direc
 
 - **작업폴더를 생성합니다.**  
   - vSphere Client로그인  
-  - 좌측에서 'VMs and Templates' 탭 클릭->우측마우스메뉴에서 'New Folder > New VM and Template Folder'선택  
-  ![](./img/2020-05-25-22-42-06.png)  
-  - install-config.yaml의 'platform.vsphere.datacenter'에 입력한 datacenter명 입력   
-  ![](./img/2020-05-25-22-44-22.png)
-  - 위 작성한 datacenter선택->우측마우스메뉴에서 'New Folder'클릭  
-  ![](./img/2020-05-25-22-47-04.png)
-  - 'templates'폴더 생성  
-  ![](./img/2020-05-25-22-48-12.png)
+  - 좌측 Tree상단의 'VMs and Templates'를 클릭하고, 아래 예시와 같이 폴더를 구성합니다.  
+  ![](./img/2020-05-28-17-17-10.png)
 
 - **VM Template을 작성합니다.**  
   - PC에 다운로드한 ova파일을 복사-붙여넣기하여 vcenter vm으로 복사   
@@ -297,12 +314,22 @@ RHCOS부팅시에 참조할 ignition값을 파라미터로 셋팅합니다.
   | guestinfo.ignition.config.data.encoding | base64 |
   | disk.EnableUUID | TRUE |
   ![](./img/2020-05-25-23-51-53.png)
+
+> ** 주의 **  
+  base64 내용을 'cat'명령어로 볼 때 아래와 같이 ';echo'를 붙이십시오.  
+  ```
+  $ cat append-bootstrap.64;echo
+  ``` 
+  ![](./img/2020-05-28-18-29-52.png)
+
 - **설정내용 최종검토**  
 최종 검토 후 [FINISH]버튼을 클릭합니다.  
 ![](./img/2020-05-25-23-52-59.png)
 
 :::tip 모든 Master node VM 생성
 VM이름과 MAC Address만 다르게 하여 나머지 Master Node VM들을 생성합니다.
+아래와 같이 첫번째 만든 기존 VM을 복사하여 MAC Address만 변경하면 됩니다. 
+![](./img/2020-05-28-17-35-54.png)
 :::
 
 ## Worker Node VM 생성
