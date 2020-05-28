@@ -28,9 +28,9 @@ metadata:
   annotations:
     storageclass.kubernetes.io/is-default-class: "true"
   name: nfs-delete
-provisioner: kubernetes.io/no-provisioner
+provisioner: standard
 reclaimPolicy: Delete
-volumeBindingMode: WaitForFirstConsumer
+volumeBindingMode: Immediate
 
 $ oc apply -f sc-nfs-delete.yaml
 ```
@@ -45,9 +45,9 @@ metadata:
   #annotations:
     #storageclass.kubernetes.io/is-default-class: "true"
   name: nfs-retain
-provisioner: kubernetes.io/no-provisioner
+provisioner: standard
 reclaimPolicy: Retain
-volumeBindingMode: WaitForFirstConsumer
+volumeBindingMode: Immediage
 
 $ oc apply -f sc-nfs-retain.yaml
 ```
@@ -144,7 +144,7 @@ Pod가 정상적으로 실행되는지 확인합니다.
 ```
 $ oc get po -n openshift-image-registry
 ```
-![](./img/2020-05-29-04-42-15.png)
+![](./img/2020-05-29-05-21-53.png)
 
 ---
 <disqus/>

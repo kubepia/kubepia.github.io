@@ -8,6 +8,11 @@ NFS dynamic provisioning을 하기 위한 nfs-provisioner Pod를 배포합니다
 [[toc]] 
 :::
 
+## git 설치  
+```
+$ yum install -y git 
+```
+
 ## nfs provisioner용 namespace 생성
 ```
 $ oc new-project nfs
@@ -131,10 +136,13 @@ $ sed -i'' "s/namespace:.*/namespace: $NAMESPACE/g" ./deploy/deployment.yaml
 
 - **deployment.yaml수정**  
 아래 항목을 적절하게 수정합니다.  
-  - env.PROVISIONER_NAME: storage class에 지정한 provisioner name과 동일하게 변경  
+  - env.PROVISIONER_NAME: storage class에 지정한 provisioner name과 동일하게 변경
   - env.NFS_SERVER, volumes.nfs.server: nfs server의 IP  
   - env.NFS_PATH, volumes.nfs.path: nfs server에 미리 만든 자동으로 volume이 생성될 상위 디렉토리  
 nfs_path디렉토리 하위에 자동으로 PVC별 디렉토리가 생성됩니다.  
+> **중요**  
+StorageClass생성 시 Provioner를 'kubernetes.io/no-provisioner'로 주면,  
+Dynamic provisoning이 안됩니다.  
 
 ```
 SAMPLE
@@ -168,7 +176,7 @@ spec:
               mountPath: /persistentvolumes
           env:
             - name: PROVISIONER_NAME
-              value: kubernetes.io/no-provisioner
+              value: standard
             - name: NFS_SERVER
               value: 10.40.89.158
             - name: NFS_PATH
@@ -182,7 +190,7 @@ spec:
 
 - **Pod 생성**
 ```
-$ oc apply -f ./deployment.yaml ​
+$ oc apply -f ./deploy/deployment.yaml ​
 ```
 
 ## 테스트
