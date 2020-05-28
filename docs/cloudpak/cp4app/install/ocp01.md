@@ -279,6 +279,13 @@ $ base64 -w0 /install/config/append-bootstrap.ign > /install/config/append-boots
   - 생성된 VM선택->우측마우스메뉴에서 'Template->Convert to template'클릭  
   ![](./img/2020-05-25-23-02-59.png)
 
+:::tip 생애 처음으로 OCP를 설치하는 분을 위한 TIP 
+OCP를 난생 처음 설치시에는 bootstrap VM만 먼저 만들고 실행시키는것이 좋습니다.  
+왜냐하면 ignition file생성 시 pullSecret, sshKey, Network설정 등에서  
+실수를 많이 하기 때문입니다.  
+bootstrap node를 정상적으로 실행한 후 다른 node들 생성을 진행하십시오. 
+:::
+
 ## Master Node VM 생성
 Master node VM을 생성합니다.  
 - **VM template 선택 -> 우측마우스메뉴에서 'New VM from This Template'클릭**  

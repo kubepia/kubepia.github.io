@@ -19,27 +19,23 @@ OCP를 최초 설치할때는 내부 TLS통신을 위해 임시 key파일을 사
 ## bootstrap, Master node VM 부팅
 VM을 부팅시키면 ignition설정에 의해 설치가 자동으로 시작됩니다.  
 bootstrap VM부터 먼저 시작합니다.  
-조금 이따가 Master VM들을 부팅합니다.  
-Worker VM들도 같이 부팅해도 되나, 실패할수도 있으므로 Master node가 정상적으로 설치된 후에 시작하십시오.  
-![](./img/2020-05-26-00-11-22.png)
 
-## bootstrap console log 보기  
+
+bootstrap의 로그를 보고 정상적으로 올라오면 Master VM들을 부팅합니다.  
 bootstrap으로 접근하여 설치 로그를 봅니다.  
 ```
 RHCOS를 사용하는 VM들은 'core'라는 user로 로그인해야 합니다.  
 $ ssh core@<bootstrap IP>
-$ journalctl -b -f -u bootkube.service
+$ journalctl -b -f
 ```
 ![](./img/2020-05-26-00-16-42.png)
-
-로그인 후 안내 메시지에 나오는 journalctl명령을 실행합니다.  
-![](./img/2020-05-26-00-19-40.png)
 
 처음에는 에러 메시지가 매우 많이 나옵니다.   
 ![](./img/2020-05-26-00-20-39.png)
 
 계속 기다리면 에러 메시지가 없어지고 설치가 되는것을 확인할 수 있습니다.  
 ![](./img/2020-05-26-00-26-54.png)
+
 
 :::tip Troubleshooting
 - **에러:'emergency.service: Failed to set up standard input: Inappropriate ioctl for device'**  
@@ -69,8 +65,11 @@ bastion의 ~/.ssh/id_rsa.pub의 내용과 install-config.yaml백업본의 내용
     install-config.yaml에 지정한 pullSecret값이 권한이 없는 token값입니다.  
     infra VM에서 subscription-manager로 등록한 user의 pullSecret으로 변경하십시오.  
     이 경우는 [install-config.yaml파일 생성](https://kubepia.github.io/cloudpak/cp4app/install/ocp01.html#install-config-yaml-%EC%83%9D%EC%84%B1)단계로 돌아가셔서 다시 시작하십시오. 
-
 :::
+
+
+Worker VM들은 Master node의 상태가 Ready가 된 후에 시작하십시오.  
+![](./img/2020-05-26-00-11-22.png)
 
 ## 설치완료 여부 확인
 설치는 약 15~20여분정도 소요됩니다.  
