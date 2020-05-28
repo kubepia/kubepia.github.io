@@ -77,7 +77,7 @@ bastion의 ~/.ssh/id_rsa.pub의 내용과 install-config.yaml백업본의 내용
 ```
 아래와 유사한 에러가 계속 발생하는데 무시하시고 기다리면 완료됩니다.  
 이 에러는 machine-config operator에 의해 CRD가 등록되면 사라집니다.
- 
+
 May 28 17:10:29 master-2.cp.kubepia.com bootkube.sh[9447]: "99_openshift-machineconfig_99-master-ssh.yaml": unable to get REST mapping for "99_openshift-machineconfig_99-master-ssh.yaml": no matches for kind "MachineConfig" in version "machineconfiguration.openshift.io/v1"
 May 28 17:10:29 master-2.cp.kubepia.com bootkube.sh[9447]: "99_openshift-machineconfig_99-worker-ssh.yaml": unable to get REST mapping for "99_openshift-machineconfig_99-worker-ssh.yaml": no matches for kind "MachineConfig" in version "machineconfiguration.openshift.io/v1"
 May 28 17:10:30 master-2.cp.kubepia.com bootkube.sh[9447]: [#3639] failed to create some manifests:
@@ -90,7 +90,7 @@ Worker VM들은 Master node의 상태가 Ready가 된 후에 시작하십시오.
 ![](./img/2020-05-26-00-11-22.png)
 
 ## 설치완료 여부 확인
-설치는 약 15~20여분정도 소요됩니다.  
+설치는 네트워크 상황에 따라 약 20~60여분정도 소요됩니다.  
 설치완료 여부는 아래 명령으로 확인할 수 있습니다.  
 ```
 $ openshift-install --dir=<installation_directory> wait-for bootstrap-complete --log-level=info
