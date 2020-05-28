@@ -9,17 +9,16 @@ openshift-install명령을 이용하여 ignition 파일을 생성합니다.
 - [OCP4.4 install 가이드](https://docs.openshift.com/container-platform/4.4/installing/installing_vsphere/installing-vsphere.html)  
 본 설치매뉴얼은 vmware vSphere상의 설치를 위해 작성되었습니다.  
 
-**중요**  
-- 2020-05-29일 현재 vmware상에서는 RHCOS4.3.0만 제대로 설치됩니다.  
-- RHCOS 4.3.8은 MachineConfig 커스텀리소스 등록이 안되서 실패됩니다.  
-- RHCOS 4.4.3은 MCO(MachineConfig Operaotor)의 버그가 있어 설치되지 않습니다.  
-
 [[toc]] 
 :::
 
 ## 사전준비
 - **vSphere버전**  
 vSphere 6.5상에도 설치가능하지만 vSphere Version 6.7 U2이상을 권장합니다.  
+
+- **RHCOS VM Template**  
+2020-05-29일 현재 vmware상에서는 RHCOS4.3.0으로 VM Template을 만드십시오.  
+그 이상의 버전으로 만든 VM Template을 이용하면 설치가 되지 않습니다.  
 
 - **System requirements**
 문서상의 최소 사양은 아래와 같습니다.  
