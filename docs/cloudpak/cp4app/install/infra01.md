@@ -122,7 +122,8 @@ $ subscription-manager refresh
 각 VM에서 아래 명령으로 방화벽을 중지합니다.  
 
 ```
-$ systemctl stop firewalld 
+$ systemctl stop firewalld
+$ systemctl disable firewalld 
 ```
 
 ---
