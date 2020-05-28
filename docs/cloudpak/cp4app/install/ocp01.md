@@ -122,6 +122,7 @@ sshKey: 'ssh-ed25519 AAAA...'
 | pullSecret | site별 SSL token값. 위 설치프로그램 다운로드 시 저장한 pullSecret파일 내용을 붙여넣게 합니다. | 생략 |
 | sshKey | [SSHKey 구성](https://kubepia.github.io/cloudpak/cp4app/install/infra08.html)시 생성한 public key파일 내용 | 생략 |
 
+**※ pullSecret과 sshKey는 복사-붙여넣기할때 여러번 체크하여 틀린게 없는지 확인하십시오.**   
 
 > defaultDatastore확인 \
 ![](./img/2020-05-25-20-38-45.png)

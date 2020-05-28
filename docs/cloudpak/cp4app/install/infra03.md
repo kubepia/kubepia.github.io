@@ -60,6 +60,12 @@ DNS2=8.8.8.8
 IPV6_PRIVACY=no
 ```
 
+:::tip 중요
+**gateway VM의 private ip는 반드시 맨 끝을 1로 해주세요.**  
+예) 172.168.0.1
+dhcp설정(/etc/dhcp/dhcpd.conf)의 router주소와 동일해야 합니다.  
+![](./img/2020-05-28-20-17-25.png)
+:::
 
 - **DNS서버 셋팅**  
 ifcfg-ens192에 DNS서버를 추가합니다.   
