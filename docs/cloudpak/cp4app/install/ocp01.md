@@ -9,6 +9,11 @@ openshift-install명령을 이용하여 ignition 파일을 생성합니다.
 - [OCP4.4 install 가이드](https://docs.openshift.com/container-platform/4.4/installing/installing_vsphere/installing-vsphere.html)  
 본 설치매뉴얼은 vmware vSphere상의 설치를 위해 작성되었습니다.  
 
+**중요**  
+- 2020-05-29일 현재 vmware상에서는 RHCOS4.3.0만 제대로 설치됩니다.  
+- RHCOS 4.3.8은 MachineConfig 커스텀리소스 등록이 안되서 실패됩니다.  
+- RHCOS 4.4.3은 MCO(MachineConfig Operaotor)의 버그가 있어 설치되지 않습니다.  
+
 [[toc]] 
 :::
 
@@ -257,6 +262,7 @@ $ base64 -w0 /install/config/append-bootstrap.ign > /install/config/append-boots
   ![](./img/2020-05-28-17-17-10.png)
 
 - **VM Template을 작성합니다.**  
+  **※ 2020-05-29일 현재 vmware상에서는 RHCOS4.3.0만 제대로 설치됩니다.**  
   - PC에 다운로드한 ova파일을 복사-붙여넣기하여 vcenter vm으로 복사   
   - 'templates'폴더 선택->우측마우스메뉴에서 'Deploy OVF Template'클릭  
   ![](./img/2020-05-25-22-49-12.png)
