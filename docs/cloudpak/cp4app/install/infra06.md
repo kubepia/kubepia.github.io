@@ -26,32 +26,39 @@ SAMPLE
 
 #
 # DHCP Server Configuration file.
-# see /usr/share/doc/dhcp*/dhcpd.conf.example
-# see dhcpd.conf(5) man page
+#   see /usr/share/doc/dhcp*/dhcpd.conf.example
+#   see dhcpd.conf(5) man page
 #
-ddns-update-style interim;
+
 ddns-update-style interim;
 authoritative;
+
 option routers 172.168.0.1;
 option domain-name-servers 172.168.0.189, 168.126.63.1;
 option subnet-mask 255.255.255.0;
 option domain-name "cp.darumtech.net";
 option broadcast-address 172.168.0.255;
+
+
 subnet 172.168.0.0 netmask 255.255.255.0 {
-host bootstrap.cp.darumtech.net { hardware ethernet 00:50:56:be:02:32; fixed-address
-172.168.0.180; }
-host master-0.cp.darumtech.net { hardware ethernet 00:50:56:be:08:88; fixed-address
-172.168.0.186; }
-host master-1.cp.darumtech.net { hardware ethernet 00:50:56:be:c3:3b; fixed-address
-172.168.0.185; }
-host master-2.cp.darumtech.net { hardware ethernet 00:50:56:be:19:ed; fixed-address
-172.168.0.184; }
-host worker-1.cp.darumtech.net { hardware ethernet 00:50:56:be:ed:5f; fixed-address
-172.168.0.183; }
-host worker-2.cp.darumtech.net { hardware ethernet 00:50:56:be:cb:5b; fixed-address
-172.168.0.182; }
+
+
+host bootstrap.cp.darumtech.net { hardware ethernet  00:50:56:be:02:32; fixed-address   172.168.0.180; }
+host master-0.cp.darumtech.net { hardware ethernet  00:50:56:be:08:88; fixed-address   172.168.0.186; }
+host master-1.cp.darumtech.net { hardware ethernet  00:50:56:be:c3:3b; fixed-address   172.168.0.185; }
+host master-2.cp.darumtech.net { hardware ethernet  00:50:56:be:19:ed; fixed-address   172.168.0.184; }
+host worker-1.cp.darumtech.net { hardware ethernet  00:50:56:be:ed:5f; fixed-address   172.168.0.183; }
+host worker-2.cp.darumtech.net { hardware ethernet  00:50:56:be:cb:5b; fixed-address   172.168.0.182; }
+
 }
 ```
+
+> **TIP**  
+  위 sample로 파일을 만든 후 아래와 같이 문자열을 일괄 변경할 수 있습니다.  
+  ```
+  $ sed -i'' "s/<대상 문자열>/<바꿀 문자열>/g" <파일경로>
+  예) sed -i'' "s/darumtech.net/kubepia.com/g" ./dhcpd.conf
+  ```  
 
 - router IP, DNS IP, base domain을 지정합니다.  
 - bootstrap, master, worker node의 MAC주소와 IP를 지정합니다.   

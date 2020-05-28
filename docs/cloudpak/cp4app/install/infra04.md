@@ -87,10 +87,11 @@ ns IN A 172.168.0.189
 www IN A 172.168.0.189
 ```
 > **TIP**  
-위 sample로 파일을 만든 후 아래와 같이 문자열을 일괄 변경할 수 있습니다.  
-```
-sed -i'' "s/darumtech.net/kubepia.com/g" ./kubepia.com.zone
-```
+  위 sample로 파일을 만든 후 아래와 같이 문자열을 일괄 변경할 수 있습니다.  
+  ```
+  $ sed -i'' "s/<대상 문자열>/<바꿀 문자열>/g" <파일경로>
+  예) sed -i'' "s/darumtech.net/kubepia.com/g" ./kubepia.com.zone
+  ```  
 
 
 ## Reverse DNS 설정
