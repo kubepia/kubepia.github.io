@@ -114,14 +114,14 @@ $ oc get nodes
 Worker node VM들을 부팅합니다.  
 
 ## Worker node 승인
-install-config.yaml에 worker node수를 지정하면 최초 설치시에는 자동으로 worker node가 추가됩니다.  
-추가된 Worker node들을 cluster에 join시키기 위해서는 CSR(Certificate Signing Requests)를 승인해야 합니다.  
+Worker node들을 cluster에 join시키기 위해서는 CSR(Certificate Signing Requests)을 승인해야 합니다.  
 ```
 Worker node들의 상태가 'Not Ready'로 보임   
 $ oc get nodes
 
 CSR승인대기 중인 node 리스트 보기  
 $ oc get csr
+![](./img/2020-05-29-03-50-25.png)
 
 CSR승인
 $ oc adm certificate approve <csr_name> 
