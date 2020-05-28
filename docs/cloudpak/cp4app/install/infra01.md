@@ -7,7 +7,7 @@
 ## VM 템플릿 작성
 VM을 생성하기 위한 RHEL7 VM템플릿을 먼저 작성합니다.    
 
-[Create a RHEL 7 Terraform template for VMware vSphere](https://blog.inkubate.io/create-a-rhel-7-terraform-template-for-vmware-vsphere/)
+[Create a RHEL 7 VM template for VMware vSphere](https://happycloud-lee.tistory.com/121)
 
 ## DRS자동화 설정
 Distributed Resource Scheduler는 자동으로 가상머신을 ESXi Host에 분산 배치시켜 주는 기술입니다.   
