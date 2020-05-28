@@ -90,7 +90,7 @@ Worker VM들은 Master node의 상태가 Ready가 된 후에 시작하십시오.
 ![](./img/2020-05-26-00-11-22.png)
 
 ## 설치완료 여부 확인
-설치는 네트워크 상황에 따라 약 20~60여분정도 소요됩니다.  
+설치는 네트워크 상황에 따라 약 20~40여분정도 소요됩니다.  
 설치완료 여부는 아래 명령으로 확인할 수 있습니다.  
 ```
 $ openshift-install --dir=<installation_directory> wait-for bootstrap-complete --log-level=info
