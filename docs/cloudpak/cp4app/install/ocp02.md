@@ -41,6 +41,37 @@ $ journalctl -b -f -u bootkube.service
 계속 기다리면 에러 메시지가 없어지고 설치가 되는것을 확인할 수 있습니다.  
 ![](./img/2020-05-26-00-26-54.png)
 
+:::tip Troubleshooting
+- **에러:'emergency.service: Failed to set up standard input: Inappropriate ioctl for device'**  
+ignition 내용이 틀린 경우 발생합니다.  
+base64 내용 처음 또는 끝에 이상한 글자가 있는지 확인해 보십시오.  
+만약 ignition data가 틀렸다면 VM을 지우고 다시 만들면서  
+정상적인 ignition data를 넣으셔야 합니다.  
+최초 부팅 전 Snapshot이 있다면 그걸 복원하고,   
+맞는 ignition data를 넣으십시오.  
+
+- **에러: ssh core@[Node IP]로 인증이 안될 때**    
+web console에 'Login:'까지 나오고 IP도 정상할당 되었는데  
+bastion에서 ssh core@[node ip]로 인증이 안되는 경우입니다.  
+install-config.yaml에 지정한 sshKey값이 틀렸습니다.  
+bastion의 ~/.ssh/id_rsa.pub의 내용과 install-config.yaml백업본의 내용을 비교하십시오.  
+이 경우는 [install-config.yaml파일 생성](https://kubepia.github.io/cloudpak/cp4app/install/ocp01.html#install-config-yaml-%EC%83%9D%EC%84%B1)단계로 돌아가셔서 다시 시작하십시오.  
+
+- **에러: quay.io에서 image pulling을 못할때**  
+  - ssh로 bootstrap을 로그인한 후 'journalctl -b -f'로 로그를 봤을 때  
+    quay.io, cloud.openshift.com등을 못찾는 경우 원인은   
+    bootstrap에서 외부 인터넷으로 통신이 안되는 경우입니다.  
+    cluster의 master/worker node는 gateway VM에 설치된 iptables를 통해 외부와 통신하게 됩니다.  
+    그런데 gateway가 연결이 안되기 때문에 외부와의 통신이 안되는 것입니다.  
+    [Infra VM Private IP설정](https://kubepia.github.io/cloudpak/cp4app/install/infra03.html#private-ip-%EC%85%8B%ED%8C%85)을 참조하여 gateway VM의 ip를 수정하십시오.  
+    수정후에는 'systemctl restart network'을 반드시 수행하십시오.  
+  - 위 문제 해결 후에도 image pulling이 안되는 경우  
+    install-config.yaml에 지정한 pullSecret값이 권한이 없는 token값입니다.  
+    infra VM에서 subscription-manager로 등록한 user의 pullSecret으로 변경하십시오.  
+    이 경우는 [install-config.yaml파일 생성](https://kubepia.github.io/cloudpak/cp4app/install/ocp01.html#install-config-yaml-%EC%83%9D%EC%84%B1)단계로 돌아가셔서 다시 시작하십시오. 
+
+:::
+
 ## 설치완료 여부 확인
 설치는 약 15~20여분정도 소요됩니다.  
 설치완료 여부는 아래 명령으로 확인할 수 있습니다.  
@@ -85,6 +116,56 @@ $ oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}
 ![](./img/2020-05-26-00-46-55.png)
 
 ![](./img/2020-05-26-00-47-13.png)
+
+:::tip
+ssh로 master, worker도 암호 없이 들어갈 수 있도록 설정합니다.  
+bastion서버의 ~/.ssh/config파일에 node정보를 추가합니다.  
+
+```
+예시)
+
+Host gateway
+    HostName 172.168.0.187
+    User root
+    IdentityFile ~/.ssh/id_rsa
+Host network
+    HostName 172.168.0.189
+    User root
+    IdentityFile ~/.ssh/id_rsa
+Host storage
+    HostName 172.168.0.188
+    User root
+    IdentityFile ~/.ssh/id_rsa
+Host bootstrap
+    HostName 172.168.0.180
+    User core
+    IdentityFile ~/.ssh/id_rsa
+Host master-0
+    HostName 172.168.0.186
+    User core
+    IdentityFile ~/.ssh/id_rsa
+Host master-1
+    HostName 172.168.0.185
+    User core
+    IdentityFile ~/.ssh/id_rsa
+Host master-2
+    HostName 172.168.0.184
+    User core
+    IdentityFile ~/.ssh/id_rsa
+Host worker-1
+    HostName 172.168.0.183
+    User core
+    IdentityFile ~/.ssh/id_rsa
+Host worker-2
+    HostName 172.168.0.182
+    User core
+    IdentityFile ~/.ssh/id_rsa
+```
+
+※ ABOUT ~/.ssh/known_hosts파일  
+ssh로 VM로그인이 성공하면 이 파일에 대상 VM정보가 등록됩니다.  
+만약 sshkey를 다시 만들었다면 이 파일을 지워야 새로운 key로 인증 됩니다.   
+:::
 
 ## 최종 확인
 node들의 상태를 확인합니다.  
