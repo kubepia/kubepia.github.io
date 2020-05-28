@@ -74,6 +74,17 @@ bastion의 ~/.ssh/id_rsa.pub의 내용과 install-config.yaml백업본의 내용
     이 경우는 [install-config.yaml파일 생성](https://kubepia.github.io/cloudpak/cp4app/install/ocp01.html#install-config-yaml-%EC%83%9D%EC%84%B1)단계로 돌아가셔서 다시 시작하십시오. 
 :::
 
+```
+아래와 유사한 에러가 계속 발생하는데 무시하시고 기다리면 완료됩니다.  
+이 에러는 machine-config operator에 의해 CRD가 등록되면 사라집니다.
+ 
+May 28 17:10:29 master-2.cp.kubepia.com bootkube.sh[9447]: "99_openshift-machineconfig_99-master-ssh.yaml": unable to get REST mapping for "99_openshift-machineconfig_99-master-ssh.yaml": no matches for kind "MachineConfig" in version "machineconfiguration.openshift.io/v1"
+May 28 17:10:29 master-2.cp.kubepia.com bootkube.sh[9447]: "99_openshift-machineconfig_99-worker-ssh.yaml": unable to get REST mapping for "99_openshift-machineconfig_99-worker-ssh.yaml": no matches for kind "MachineConfig" in version "machineconfiguration.openshift.io/v1"
+May 28 17:10:30 master-2.cp.kubepia.com bootkube.sh[9447]: [#3639] failed to create some manifests:
+May 28 17:10:30 master-2.cp.kubepia.com bootkube.sh[9447]: "99_openshift-machineconfig_99-master-ssh.yaml": unable to get REST mapping for "99_openshift-machineconfig_99-master-ssh.yaml": no matches for kind "MachineConfig" in version "machineconfiguration.openshift.io/v1"
+May 28 17:10:30 master-2.cp.kubepia.com bootkube.sh[9447]: "99_openshift-machineconfig_99-worker-ssh.yaml": unable to get REST mapping for "99_openshift-machineconfig_99-worker-ssh.yaml": no matches for kind "MachineConfig" in version "machineconfiguration.openshift.io/v1"
+```
+
 - **Worker Node 실행**  
 Worker VM들은 Master node의 상태가 Ready가 된 후에 시작하십시오.  
 ![](./img/2020-05-26-00-11-22.png)
