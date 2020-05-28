@@ -30,6 +30,11 @@ $ journalctl -b -f
 ```
 ![](./img/2020-05-26-00-16-42.png)
 
+- **Master Node 실행**   
+bootstrap에 ip가 할당되면 ssh로 접근이 됩니다.  
+ssh로 bootstrap로그인이 되면 master node들을 시작합니다.  
+
+bootstrap의 journalctl -b -f로 보면,  
 처음에는 에러 메시지가 매우 많이 나옵니다.   
 ![](./img/2020-05-26-00-20-39.png)
 
@@ -54,6 +59,8 @@ bastion의 ~/.ssh/id_rsa.pub의 내용과 install-config.yaml백업본의 내용
 이 경우는 [install-config.yaml파일 생성](https://kubepia.github.io/cloudpak/cp4app/install/ocp01.html#install-config-yaml-%EC%83%9D%EC%84%B1)단계로 돌아가셔서 다시 시작하십시오.  
 
 - **에러: quay.io에서 image pulling을 못할때**  
+  - bootstrap만 실행하고, master vm을 시작하지 않으면 발생합니다.  
+    Master VM을 모두 시작하십시오.  
   - ssh로 bootstrap을 로그인한 후 'journalctl -b -f'로 로그를 봤을 때  
     quay.io, cloud.openshift.com등을 못찾는 경우 원인은   
     bootstrap에서 외부 인터넷으로 통신이 안되는 경우입니다.  
@@ -66,9 +73,6 @@ bastion의 ~/.ssh/id_rsa.pub의 내용과 install-config.yaml백업본의 내용
     infra VM에서 subscription-manager로 등록한 user의 pullSecret으로 변경하십시오.  
     이 경우는 [install-config.yaml파일 생성](https://kubepia.github.io/cloudpak/cp4app/install/ocp01.html#install-config-yaml-%EC%83%9D%EC%84%B1)단계로 돌아가셔서 다시 시작하십시오. 
 :::
-
-- **Master Node 실행**  
-bootstrap node가 정상적으로 실행되면, Master node를 실행합니다.  
 
 - **Worker Node 실행**  
 Worker VM들은 Master node의 상태가 Ready가 된 후에 시작하십시오.  
