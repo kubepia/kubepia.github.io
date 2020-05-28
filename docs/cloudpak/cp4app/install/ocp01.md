@@ -41,15 +41,35 @@ Master Node는 최소 3개이상, Worker Node는 최소 2개 이상 필요합니
 참조: [User provisioned infrastructure](https://docs.openshift.com/container-platform/4.3/installing/installing_vsphere/installing-vsphere.html#installation-network-user-infra_installing-vsphere) 
 
 ## 설치 프로그램 다운로드
-- **[Redhat 설치 가이드](https://cloud.redhat.com/openshift/install)**으로 로그인합니다.  
-그리고 설치 인프라 환경을 선택하십시오.  본 매뉴얼에서는 vmware상에 설치합니다.  
-![](./img/2020-05-25-20-18-04.png)
+- **Local PC에서 파일 다운로드**  
+  - **[Redhat 설치 가이드](https://cloud.redhat.com/openshift/install)**으로 로그인합니다.  
+    그리고 설치 인프라 환경을 선택하십시오.  본 매뉴얼에서는 vmware상에 설치합니다.  
+    ![](./img/2020-05-25-20-18-04.png)
 
-- OS에 맞는 설치 openshift-install, Pull secret값, RHCOS, OC CLI를 다운로드 합니다. 
-![](./img/2020-05-25-20-18-38.png)
+  - OS에 맞는 설치 openshift-install, Pull secret값, RHCOS, OC CLI를 다운로드 합니다. 
+    ![](./img/2020-05-25-20-18-38.png)
 
-- openshift-install, OC가 잘 설치되었는지 확인합니다. 
-![](./img/2020-05-25-03-04-42.png)
+- **bastion VM으로 복사**  
+  Local PC의 다운로드 위치는 '~/Downloads/ocp'이고, basion VM의 target 디렉토리는 '~/tmp'일때  
+  아래와 같이 작업하면 됩니다.   
+  이전 [sslkey 구성](https://kubepia.github.io/cloudpak/cp4app/install/infra08.html#ssl-key-%EC%83%9D%EC%84%B1)단계에서 Local PC에 대한 작업을 미리 해야 암호없이 파일을 복사할 수 있습니다.  
+  ```
+  $ cd ~/Downloads/ocp   
+  $ scp -P 19022 ./openshift-client-linux.tar.gz kubepia:~/tmp
+  $ scp -P 19022 ./openshift-install-linux.tar.gz kubepia:~/tmp
+  $ scp -P 19022 ./pull-secret.txt kubepia:~/tmp 
+  ```
+  - **bastion VM에서 압축해제 및 CLI파일 복사**  
+  ```
+  $ cd ~/tmp
+  $ tar xvf openshift-client-linux.tar.gz
+  $ tar xvf openshift-install-linux.tar.gz
+  $ cp oc /usr/local/bin && cp kubectl /usr/local/bin && cp openshift-install /usr/local/bin
+  ```
+  
+- **openshift-install, OC가 잘 설치되었는지 확인합니다.**   
+![](./img/2020-05-28-16-50-56.png)
+
 
 ## 설치 작업 디렉토리 생성
 install-config.yaml과 ignition파일들이 생성될 설치 작업 디렉토리를 생성합니다.  
