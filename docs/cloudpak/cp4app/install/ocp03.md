@@ -97,12 +97,12 @@ metadata:
   name: image-registry-pv
 spec:
   accessModes:
-    ReadWriteMany
-    capacity:
-      storage: 100Gi
+    - ReadWriteMany
+  capacity:
+    storage: 100Gi
   nfs:
-    path: <nfs volume directory>
     server: <nfs server ip>
+    path: <nfs volume directory>
   persistentVolumeReclaimPolicy: Retain
   storageClassName: nfs-retain
 
