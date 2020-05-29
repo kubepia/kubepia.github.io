@@ -157,6 +157,10 @@ spec:
 $ oc login https://<your_cluster_hostname> -u <username> -p <password>
 ```
 ![](./img/2020-05-26-21-07-34.png)
+:::tip
+oc login이 아래 에러가 나면 ~/.kube/config파일을 삭제하고, 다시 로그인하시면 됩니다.  
+error: x509: certificate signed by unknown authority
+:::
 
 - **installer 실행**  
 'icpa-installer:4.1.1'는 설치 버전에 맞게 변경하십시오.  
