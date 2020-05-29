@@ -172,6 +172,14 @@ $ docker run -v ~/.kube:/root/.kube:z -u 0 -t \
           -e ENTITLED_REGISTRY -e ENTITLED_REGISTRY_USER -e ENTITLED_REGISTRY_KEY \
           "$ENTITLED_REGISTRY/cp/icpa/icpa-installer:4.1.1" cs-install
 ```
+:::tip 설치 실패시 clear
+설치 실패 시 처음부터 다시 설치하려면 uninstall을 먼저해야 합니다.  
+위 명령어의 가장 마지막 'cs-install'을 'cs-uninstall'로 바꿔서 실행하면 됩니다.  
+재시도 시 시작하자 마자 2단계정도에서 실패하면 위 docker login과 oc login을   
+다시 한번 하고 설치하십시오.  
+
+그 외 에러는 [Common service install Trouble shooting guide](https://www.ibm.com/support/knowledgecenter/SSCSJL_4.1.x/troubleshoot-cs.html)를 참조하세요. 
+:::
 
 ### Common Service 로그인 
 

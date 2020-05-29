@@ -131,8 +131,14 @@ sshKey: 'ssh-ed25519 AAAA...'
 | pullSecret | site별 SSL token값. 위 설치프로그램 다운로드 시 저장한 pullSecret파일 내용을 붙여넣게 합니다. | 생략 |
 | sshKey | [SSHKey 구성](https://kubepia.github.io/cloudpak/cp4app/install/infra08.html)시 생성한 public key파일 내용 | 생략 |
 
-Datacenter이름은 아래 그림을 참조하여 지정하십시오.  
-![](./img/2020-05-29-12-12-40.png)
+:::tip vCenter VMs Folder구조와 매핑  
+위에서 지정한 Datacenter명과 metadata.name과 동일하게  
+vCenter의 'VMs and templates'의 폴더 명을 맞추십시오.  
+이는 OCP설치 시 기본 생성되는 StorageClass 'thin'을 사용할때  
+dynamic provisioning을 하기 위함입니다.   
+![](./img/2020-05-29-13-34-34.png)
+:::
+
 
 **※ pullSecret과 sshKey는 복사-붙여넣기할때 여러번 체크하여 틀린게 없는지 확인하십시오.**   
 
