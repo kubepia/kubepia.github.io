@@ -131,12 +131,16 @@ sshKey: 'ssh-ed25519 AAAA...'
 | pullSecret | site별 SSL token값. 위 설치프로그램 다운로드 시 저장한 pullSecret파일 내용을 붙여넣게 합니다. | 생략 |
 | sshKey | [SSHKey 구성](https://kubepia.github.io/cloudpak/cp4app/install/infra08.html)시 생성한 public key파일 내용 | 생략 |
 
-:::tip vCenter VMs Folder구조와 매핑  
+**※vCenter 'VMs and Templates' 폴더 구조**   
+:::tip install-config.yaml과 매핑하여 폴더 작성  
 위에서 지정한 Datacenter명과 metadata.name과 동일하게  
 vCenter의 'VMs and templates'의 폴더 명을 맞추십시오.  
 이는 OCP설치 시 기본 생성되는 StorageClass 'thin'을 사용할때  
 dynamic provisioning을 하기 위함입니다.   
 ![](./img/2020-05-29-13-34-34.png)
+
+※ vCenter폴더 구조를 install-config.yaml과 맞춰야 하는걸 매뉴얼 작성 후 알았습니다.  
+그래서 이후 화면에는 폴더구조가 틀리게 구성되어 있는 이미지가 많습니다.  
 :::
 
 
@@ -271,9 +275,8 @@ $ base64 -w0 /install/config/append-bootstrap.ign > /install/config/append-boots
 
 - **작업폴더를 생성합니다.**  
   - vSphere Client로그인  
-  - 좌측 Tree상단의 'VMs and Templates'를 클릭하고, 아래 예시와 같이 폴더를 구성합니다.  
-  ![](./img/2020-05-28-17-17-10.png)
-
+  - 좌측 Tree상단의 'VMs and Templates'를 클릭하고, [install-config.yaml생성](http://localhost:8080/cloudpak/cp4app/install/ocp01.html#install-config-yaml-%EC%83%9D%EC%84%B1)시 지정한 Datacenter와 metadata.name으로 폴더를 구성합니다.  
+  
 - **VM Template을 작성합니다.**  
   **※ 2020-05-29일 현재 vmware상에서는 RHCOS4.3.0만 제대로 설치됩니다.**  
   - PC에 다운로드한 ova파일을 복사-붙여넣기하여 vcenter vm으로 복사   
