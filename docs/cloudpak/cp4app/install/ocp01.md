@@ -19,7 +19,8 @@ vSphere 6.5상에도 설치가능하지만 vSphere Version 6.7 U2이상을 권�
 - **RHCOS VM Template**  
 2020-05-29일 현재 vmware상에서는 RHCOS4.3.0으로 VM Template을 만드십시오.  
 그 이상의 버전으로 만든 VM Template을 이용하면 설치가 되지 않습니다.  
-RHCOS 4.3.0을 이용하여 설치하여도 OCP버전은 가장 최신 버전이 설치됩니다.  
+테스트 결과 RHCOS 4.3.0 ova파일로 템플릿을 만들고, openshift-installer 4.4.5로  
+설치하니 OCP버전 4.4.5가 잘 설치되었습니다.    
 ![](./img/2020-05-29-04-45-52.png)
 
 - **System requirements**
@@ -54,6 +55,8 @@ Master Node는 최소 3개이상, Worker Node는 최소 2개 이상 필요합니
 
   - OS에 맞는 설치 openshift-install, Pull secret값, RHCOS, OC CLI를 다운로드 합니다. 
     ![](./img/2020-05-25-20-18-38.png)
+  - 특정 버전의 openshift-installer를 다운로드 하려면 아래 주소를 이용하십시오.  
+    [Openshift-installer 버전별 Download](https://mirror.openshift.com/pub/openshift-v4/clients/ocp/)  
 
 - **bastion VM으로 복사**  
   Local PC의 다운로드 위치는 '~/Downloads/ocp'이고, basion VM의 target 디렉토리는 '~/tmp'일때  
