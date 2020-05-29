@@ -74,23 +74,12 @@ bastion의 ~/.ssh/id_rsa.pub의 내용과 install-config.yaml백업본의 내용
     이 경우는 [install-config.yaml파일 생성](https://kubepia.github.io/cloudpak/cp4app/install/ocp01.html#install-config-yaml-%EC%83%9D%EC%84%B1)단계로 돌아가셔서 다시 시작하십시오. 
 :::
 
-```
-아래와 유사한 에러가 계속 발생하는데 무시하시고 기다리면 완료됩니다.  
-이 에러는 machine-config operator에 의해 CRD가 등록되면 사라집니다.
-
-May 28 17:10:29 master-2.cp.kubepia.com bootkube.sh[9447]: "99_openshift-machineconfig_99-master-ssh.yaml": unable to get REST mapping for "99_openshift-machineconfig_99-master-ssh.yaml": no matches for kind "MachineConfig" in version "machineconfiguration.openshift.io/v1"
-May 28 17:10:29 master-2.cp.kubepia.com bootkube.sh[9447]: "99_openshift-machineconfig_99-worker-ssh.yaml": unable to get REST mapping for "99_openshift-machineconfig_99-worker-ssh.yaml": no matches for kind "MachineConfig" in version "machineconfiguration.openshift.io/v1"
-May 28 17:10:30 master-2.cp.kubepia.com bootkube.sh[9447]: [#3639] failed to create some manifests:
-May 28 17:10:30 master-2.cp.kubepia.com bootkube.sh[9447]: "99_openshift-machineconfig_99-master-ssh.yaml": unable to get REST mapping for "99_openshift-machineconfig_99-master-ssh.yaml": no matches for kind "MachineConfig" in version "machineconfiguration.openshift.io/v1"
-May 28 17:10:30 master-2.cp.kubepia.com bootkube.sh[9447]: "99_openshift-machineconfig_99-worker-ssh.yaml": unable to get REST mapping for "99_openshift-machineconfig_99-worker-ssh.yaml": no matches for kind "MachineConfig" in version "machineconfiguration.openshift.io/v1"
-```
-
 - **Worker Node 실행**  
 Worker VM들은 Master node의 상태가 Ready가 된 후에 시작하십시오.  
 ![](./img/2020-05-26-00-11-22.png)
 
 ## 설치완료 여부 확인
-설치는 네트워크 상황에 따라 약 20~40여분정도 소요됩니다.  
+설치는 네트워크 상황에 따라 약 20~30여분정도 소요됩니다.  
 설치완료 여부는 아래 명령으로 확인할 수 있습니다.  
 ```
 $ openshift-install --dir=<installation_directory> wait-for bootstrap-complete --log-level=info
@@ -135,7 +124,10 @@ $ oc get csr -o go-template='{{range .items}}{{if not .status}}{{.metadata.name}
 ![](./img/2020-05-26-00-47-13.png)
 
 :::tip
-ssh로 master, worker도 암호 없이 들어갈 수 있도록 설정합니다.  
+- 'watch oc get co'명령을 실행하고, Cluster Operator들의 Available이  
+   모두 True가 될때까지 가끔 'oc get csr'명령을 실행하여 대기중인 CSR리스트를 확인합니다.  
+   대기중인 CSR이 있으면 모든 CSR승인 명령으로 승인합니다.    
+- ssh로 master, worker도 암호 없이 들어갈 수 있도록 설정합니다.  
 bastion서버의 ~/.ssh/config파일에 node정보를 추가합니다.  
 
 ```

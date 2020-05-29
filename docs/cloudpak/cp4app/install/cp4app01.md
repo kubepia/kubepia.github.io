@@ -72,6 +72,9 @@ IBM Common Service의 IAM은 IdP(Identity Provider)로 LDAP만 지원합니다.
   다른 그룹 추가시에는 user복사와 유사하게 'Copy or move this entry'를 클릭하여 기존 group을 복사하여 생성하면 됨  
   ![](./img/2020-05-26-17-52-48.png)
 
+### snapshot 작성  
+Common Service 설치 전에 모든 VM들의 snapshot을 작성합니다. 
+  
 ## IBM Common Service 설치
 ### 설치registry를 접근하기 위한 entitlement key취득 
 - **Installing > Installing with the cloud pak CLI클릭**  
@@ -93,6 +96,9 @@ $ export ENTITLED_REGISTRY_USER=cp
 $ export ENTITLED_REGISTRY_KEY=<apikey>
 ```
 - **registry login**  
+bastion VM에 docker 설치를 먼저 하십시오.  
+[centos7에 docker설치](https://happycloud-lee.tistory.com/14?category=830565) 
+
 ```
 $ docker login "$ENTITLED_REGISTRY" -u "$ENTITLED_REGISTRY_USER" -p "$ENTITLED_REGISTRY_KEY"
 ```
@@ -105,9 +111,6 @@ $ docker run -e LICENSE=view \
 ![](./img/2020-05-26-20-31-29.png)
 ![](./img/2020-05-26-20-32-15.png)
 
-> **※ bastion VM에 docker 설치**  
-[docker설치](https://happycloud-lee.tistory.com/14?category=830565)를 참조하여 설치하십시오.  
-
 - **설치 config파일들 생성**  
 'icpa-installer:4.1.1'는 설치 버전에 맞게 변경하십시오.  
 ```
@@ -118,8 +121,6 @@ $ docker run -v $PWD/data:/data:z -u 0 \
 ```
 ![](./img/2020-05-26-20-32-52.png)
 
-### snapshot 작성  
-Common Service 설치 전에 모든 VM들의 snapshot을 작성합니다.  
 
 ### 설치 config파일들 수정 
 
