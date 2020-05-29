@@ -216,11 +216,13 @@ $ oc -n ibmplatform-service get secret admin-credential -o jsonpath='{.data.defa
 | Server type | LDAP 종류. openldap은 Custom선택 | Custom |
 | Base DN | LDAP Hostname에 따라 구별된 이름 지정 | dc=ldap,dc=cp,dc=darumtech,dc=net |
 | Bind DN | LDAP admin의 구별된 이름 지정 | cn=admin,dc=ldap,dc=cp,dc=darumtech,dc=net |
-| Bind DN password | LDAP admin 암호 | 생략 |
+| Bind DN paessword | LDAP admin 암호 | 생략 |
+| LDAP server | ldap://[서비스명(oc get svc -n ldap으로 구함)].[namespace].svc:389 |  ldap://ldap-openldap.ldap.svc:389 |
 | Group filter | Group가져올때 query | (&(cn=%v)(objectclass=groupOfUniqueNames)) |
 | User filter | User가져올때 query | (&(uid=%v)(objectclass=inetOrgPerson)) |
 
 ![](./img/2020-05-26-21-25-09.png)
+![](./img/2020-05-29-14-35-20.png)
 ![](./img/2020-05-26-21-34-29.png)
 
 - **Team 추가**  
