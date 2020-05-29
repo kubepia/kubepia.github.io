@@ -163,13 +163,14 @@ error: x509: certificate signed by unknown authority
 :::
 
 - **installer 실행**  
-'icpa-installer:4.1.1'는 설치 버전에 맞게 변경하십시오.  
+'icpa-installer:4.1.1'는 설치 버전에 맞게 변경하십시오. 
+반드시 install yaml파일들이 있는 data디렉토리의 상위 디렉토리에서 수행하세요.  
 ```
 $ docker run -v ~/.kube:/root/.kube:z -u 0 -t \
           -v $PWD/data:/installer/data:z \
           -e LICENSE=accept \
           -e ENTITLED_REGISTRY -e ENTITLED_REGISTRY_USER -e ENTITLED_REGISTRY_KEY \
-          "$ENTITLED_REGISTRY/cp/icpa/icpa-installer:4.1.1 cs-install
+          "$ENTITLED_REGISTRY/cp/icpa/icpa-installer:4.1.1" cs-install
 ```
 
 ### Common Service 로그인 
