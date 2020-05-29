@@ -73,7 +73,7 @@ Workaround로 아래와 같이 OCP의 Secret 'pull-secret'에 인증 token을 �
    - Password: ENTITLED_REGISTRY_KEY
    - Email: 아무 email이나 입력   
    ![](./img/2020-05-29-15-23-19.png)
- - 확인하기  
+ - Secret값 확인
    ![](./img/2020-05-30-05-45-59.png)
    ![](./img/2020-05-30-05-46-27.png)
 
