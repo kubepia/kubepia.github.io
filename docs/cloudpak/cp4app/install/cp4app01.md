@@ -172,6 +172,12 @@ $ docker run -v ~/.kube:/root/.kube:z -u 0 -t \
           -e ENTITLED_REGISTRY -e ENTITLED_REGISTRY_USER -e ENTITLED_REGISTRY_KEY \
           "$ENTITLED_REGISTRY/cp/icpa/icpa-installer:4.1.1" cs-install
 ```
+
+설치 진행상황은 Terminal console보다는 OCP Webconsole의 Event를 보시는게 더 좋습니다.  
+계속 동일한 에러가 발생하면(예: PV binding 에러, pull image fail등) 중단하고 원인을 조치한 후  
+재시도 하십시오. 
+![](./img/2020-05-29-14-18-14.png)
+
 :::tip 설치 실패시 clear
 설치 실패 시 처음부터 다시 설치하려면 uninstall을 먼저해야 합니다.  
 위 명령어의 가장 마지막 'cs-install'을 'cs-uninstall'로 바꿔서 실행하면 됩니다.  
