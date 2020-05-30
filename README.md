@@ -81,6 +81,8 @@ $ npm run dev
 웹브라우저에서 http://localhost:8080으로 접근합니다.  
 ```
 **※ hot deploy되므로 소스 수정 후 저장하면 바로 반영됩니다.**  
+즉, 위 preview는 중단하지 말고 그대로 실행시켜 놓으면 수정사항이 바로 바로  
+반영되어 편리합니다.  
 
 #### clipboard image바로 생성 및 붙여넣기  
 작성 시 화면캡처한 이미지를 즉시 파일로 생성하고 소스에 image tag를 추가할 수 있습니다.  
@@ -88,7 +90,8 @@ $ npm run dev
 'Paste Image'라는 plugin을 설치한 후 Image path와 문자열 prefix를 적절하게 셋팅하십시오.  
 ![](./img/2020-05-30-14-25-08.png)
 
-이제 클립보드에 이미즈를 복사한 후 소스의 붙여넣을 위치에서 CTRL+ALT+V(Mac은 Option+Command+V)를 클릭하면 아래와 같이 이미지 문자열이 자동생성됩니다. 당연히 그 위치에 image파일이 생깁니다.  
+이제 클립보드에 이미즈를 복사한 후 소스의 붙여넣을 위치에서 CTRL+ALT+V(Mac은 Option+Command+V)를 클릭하면  
+아래와 같이 이미지 문자열이 자동생성됩니다. 당연히 그 위치에 image파일이 생깁니다.  
 ![](./img/2020-05-30-14-29-46.png)
 
 ---
@@ -96,17 +99,16 @@ $ npm run dev
 
 #### Commit 
 아래와 같이 본인 작성 소스를 병합하고 push합니다.  
-- commit  
-   ``` sh
-   git add .
-   git commit -m "describe changes"
-   ```
+``` sh
+git add .
+git commit -m "describe changes"
+```
 #### Pulling
-- **dev브랜치로 전환  
+**dev브랜치로 전환**  
 ```sh
 $ git checkout dev
 ```
-- 서버에서 변경사항 pulling  
+서버에서 변경사항 pulling  
 ```sh
 $ git pull origin dev
 ```
@@ -123,6 +125,7 @@ $ git push origin dev
 ```
 
 ### Step04 : Confirm changes
-
+git action 수행 시간이 있으므로 약 5분 정도 후에  
+[kubepia](https://kubepia.github.io/)에 접근하여 변경사항이 반영되었는지 확인합니다.  
 ---
    
