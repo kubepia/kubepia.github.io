@@ -6,12 +6,14 @@ kubepia는 공개 커뮤니티이므로 누구나 가입하여 글을 올릴 수
 공개 커뮤니티이기 때문에 글을 올리실 목적이 아니라면 가입 없이도 자유롭게 글을 보실수 있습니다.  
 가입 절차는 아래 내용으로 운영자에게 요청하시면 됩니다.  
 > **가입요청 메일**  
+```
   To: hklee@kr.ibm.com  
   요청내용(이름과 email만 필수)  
-  * 이름:   
-  * 회사:   
-  * email:   
-  * 가입목적:   
+  - 이름:   
+  - 회사:   
+  - email:   
+  - 가입목적:   
+```
 
 ## How to write
 node.js의 vuepress라는 모듈을 이용하여 글을 등록합니다.  
@@ -19,7 +21,7 @@ node.js의 vuepress라는 모듈을 이용하여 글을 등록합니다.
 - git clone  
 - 글 작성/수정  
 - git merge & push  
-- HTML생성 
+- HTML생성  
   미리 작성된 git action이 자동 수행됨   
   - vuepress가 소스를 읽어 html들 생성  
   - 생성된 html들을 master branch로 overwrite  
