@@ -26,12 +26,16 @@ node.js의 vuepress라는 모듈을 이용하여 글을 등록합니다.
   - vuepress가 소스를 읽어 html들 생성  
   - 생성된 html들을 master branch로 overwrite  
 
+---
+
 ### Step01 : Clone
 1. clone this repository with branch 'dev'
    ```sh
    git clone -o origin https://github.com/kubepia/kubepia.github.io.git
    cd kubepia.github.io
    ```
+
+---
 
 ### Step02 : Write/Modify
 #### 본인 Local branch로 전환
@@ -95,6 +99,7 @@ $ npm run dev
 ![](./img/2020-05-30-14-29-46.png)
 
 ---
+
 ### Step03 : Commit, Pulling, Merge and Push
 
 #### Commit 
@@ -124,9 +129,10 @@ $ git merge <local 작업 branch>
 $ git push origin dev
 ```
 
+---
+
 ### Step04 : Confirm changes  
 
 git action 수행 시간이 있으므로 약 5분 정도 후에  
 [kubepia](https://kubepia.github.io/)에 접근하여 변경사항이 반영되었는지 확인합니다.  
----
    
