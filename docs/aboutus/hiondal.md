@@ -24,7 +24,8 @@ next: /aboutus/jwyoon
 
 ## 경력
 > 그룹웨어와 통합포탈 프로젝트를 다수 수행하였습니다.\
-2019년 부터는 Hybrid Cloud Service 관련 Workshop프로그램과 PoC를 수행하고 있습니다.
+2019년 부터는 Hybrid Cloud Service를 수행하고 있습니다.  
+Cloud Workshop프로그램인 IBM Cloud Garage나 Container platform구축 관련 문의가 있으시면 언제라도 연락 주십시오.
 
 ::: tip 최근 3년(from 2017) 주요 프로젝트
 - Portal project: HKT, SKC
