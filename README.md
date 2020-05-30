@@ -124,7 +124,8 @@ $ git merge <local 작업 branch>
 $ git push origin dev
 ```
 
-### Step04 : Confirm changes
+### Step04 : Confirm changes  
+
 git action 수행 시간이 있으므로 약 5분 정도 후에  
 [kubepia](https://kubepia.github.io/)에 접근하여 변경사항이 반영되었는지 확인합니다.  
 ---
