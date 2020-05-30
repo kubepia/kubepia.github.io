@@ -8,10 +8,10 @@ kubepia는 공개 커뮤니티이므로 누구나 가입하여 글을 올릴 수
 > **가입요청 메일**  
   To: hklee@kr.ibm.com  
   요청내용(이름과 email만 필수)  
-  - 이름:   
-  - 회사:   
-  - email:   
-  - 가입목적:   
+  * 이름:   
+  * 회사:   
+  * email:   
+  * 가입목적:   
 
 ## How to write
 
