@@ -11,6 +11,9 @@ IBM에 책임을 물으시면 안됩니다.
 저는 이분들이 무수한 시행착오로 얻어낸 설치과정을 정리만 했을뿐입니다.   
 :::
 
+설치를 시작하려면 필수적으로 H/W와 **Redhat subscription**이 필요합니다.  
+정식 Redhat subscription은 발급에 2주정도 걸리므로 미리 준비하시기 바랍니다.  
+
 ## Infra Servers 구성
 - [VM 생성](https://kubepia.github.io/cloudpak/cp4app/install/infra01.html)
 - [Web서버 설치](https://kubepia.github.io/cloudpak/cp4app/install/infra02.html)
