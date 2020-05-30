@@ -13,10 +13,9 @@ kubepia는 공개 커뮤니티이므로 누구나 가입하여 글을 올릴 수
   - email:   
   - 가입목적:   
 
+## How to write
 
-### How to write
-
-#### Step01 : Clone
+### Step01 : Clone
 1. clone this repository with branch 'dev'
    ```sh
    git clone -o origin https://github.com/kubepia/kubepia.github.io.git
@@ -26,7 +25,7 @@ kubepia는 공개 커뮤니티이므로 누구나 가입하여 글을 올릴 수
 2. make sure branch is 'dev'.\
    ![](./img/2020-03-06-16-17-50.png)
 
-#### Step02 : Write/Modify
+### Step02 : Write/Modify
 1. checkout branch to modify or add document in local only
    ```sh
    git checkout -b 20200305
@@ -41,15 +40,15 @@ kubepia는 공개 커뮤니티이므로 누구나 가입하여 글을 올릴 수
    git commit -m "describe changes"
    ```
 
-#### Step03 : Merge with others' changes
+### Step03 : Merge with others' changes
 1. checkout 'dev' : git checkout dev
 2. update from remote : git pull origin dev
 3. merge local change to 'dev': git merge 20200305
 4. push : git push origin dev
 
-#### Step04 : Confirm changes
-
-### How to add nav item
+### Step04 : Confirm changes
+---
+## How to add nav item
 
 1. Open /docs/.vuepress/config.js
 2. goto item
@@ -60,7 +59,7 @@ kubepia는 공개 커뮤니티이므로 누구나 가입하여 글을 올릴 수
       1. use directory default then '/[directory name]/'
       2. use page url : '/[directory]/[md filename without .md]/'
    
-### How to add sidebar item
+## How to add sidebar item
 
 1. Open /docs/.vuepress/config.js
 2. goto item
@@ -70,7 +69,7 @@ kubepia는 공개 커뮤니티이므로 누구나 가입하여 글을 올릴 수
 5. children items : title & path in array under children
    ![](./img/2020-03-06-16-29-44.png)
 
-### How to comment and reply block
+## How to comment and reply block
 
 1. add '<disqus/>' at the bottom of page
 2. log in disqus.com with kubepia2020@gmail.com
