@@ -1,13 +1,18 @@
 # kubepia.github.io
-> 문서 작성과 공개를 위한 Project
-> Kubernetes관련된 기술정보 공유와 Asset을 제공하는 프로젝트임
+> 본 프로젝트는 kubernetes관련 정보공유 사이트인 [kubepia](http://kubepia.github.io)의 글 관리를 위해 관리됩니다.   
 
-## Join and Wrtie contents
+## kubepia 가입 신청
+kubepia는 공개 커뮤니티이므로 누구나 가입하여 글을 올릴 수 있습니다.  
+공개 커뮤니티이기 때문에 글을 올리실 목적이 아니라면 가입 없이도 자유롭게 글을 보실수 있습니다.  
+가입 절차는 아래 내용으로 운영자에게 요청하시면 됩니다.  
+> **가입요청 메일**  
+  To: hklee@kr.ibm.com  
+  요청내용(이름과 email만 필수)  
+  - 이름:   
+  - 회사:   
+  - email:   
+  - 가입목적:   
 
-> Use gitpages as organization : kubepia.github.io
-> Assets' project in https://github.com/kubepia
-> Page generated automatically using travis ci and git pages with branch 'master'
-> use markdown in branch 'dev' which is default.
 
 ### How to write
 

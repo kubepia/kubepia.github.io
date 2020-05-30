@@ -12,5 +12,7 @@ features:
   details: k8s 이야기. 기본적인 사용법과 kubectl Cheet Sheet 등을 제공합니다.
 - title: Architecture
   details: k8s 기반의 sample application, middleware 구성 등을 설명합니다.
+- title: CloudPak
+  details: IBM CloudPak제품군 관련 정보를 공유합니다.  
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
