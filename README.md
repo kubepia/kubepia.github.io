@@ -39,6 +39,9 @@ node.js의 vuepress라는 모듈을 이용하여 글을 등록합니다.
 ---
 
 ### Step02 : Write/Modify
+#### markdown 사용하기
+[markdown sample](https://kubepia.github.io/cloudpak/md-sample.html)을 참조하십시오.  
+
 #### 본인 Local branch로 전환
    **반드시 Local에 본인만의 branch를 만들어 작업하십시오.**  
    여러 사람이 글을 관리하므로 충돌나지 않게 자기만의 날짜별 branch에서 작업하셔야 합니다.  
