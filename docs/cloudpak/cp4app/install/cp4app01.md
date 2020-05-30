@@ -350,7 +350,10 @@ user1을 LDAP에 등록 후 Common Service로 로그인하려고 하면
 
 **Identities값 초기화는 YAML을 편집하여 identities의 값을 'null'로 변경하면 됩니다.**  
 
-![](./img/2020-05-26-22-45-24.png)
+![](./img/2020-05-30-15-44-44.png)
+
+![](./img/2020-05-30-15-43-19.png)
+
 ::: 
 
 ---
