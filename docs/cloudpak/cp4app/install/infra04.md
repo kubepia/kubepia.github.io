@@ -59,30 +59,30 @@ $ vi <Forard DNS 설정파일>
 ```
 SAMPLE 
 
-@ IN SOA @ cp.darumtech.net. (
-                    3 ; serial
-                    1D ; refresh
-                    1H ; retry
-                    1W ; expire
-                    3H ) ; minimum
-        IN NS cp.darumtech.net.
+@ IN SOA @ cp.kubepia.com. (
+                                                         3 ; serial
+                                                         1D ; refresh
+                                                         1H ; retry
+                                                         1W ; expire
+                                                         3H ) ; minimum
+        IN NS cp.kubepia.com.
         IN A 172.168.0.189
-cp.darumtech.net. IN A 172.168.0.189
-api.cp.darumtech.net. IN A 172.168.0.189
-api-int.cp.darumtech.net. IN A 172.168.0.189
-*.apps.cp.darumtech.net. IN A 172.168.0.189
-bootstrap.cp.darumtech.net. IN A 172.168.0.180
-master-0.cp.darumtech.net. IN A 172.168.0.186
-master-1.cp.darumtech.net. IN A 172.168.0.185
-master-2.cp.darumtech.net. IN A 172.168.0.184
-worker-1.cp.darumtech.net. IN A 172.168.0.183
-worker-2.cp.darumtech.net. IN A 172.168.0.182
-etcd-0.cp.darumtech.net. IN A 172.168.0.186
-etcd-1.cp.darumtech.net. IN A 172.168.0.185
-etcd-2.cp.darumtech.net. IN A 172.168.0.184
-_etcd-server-ssl._tcp.cp.darumtech.net. IN SRV 0 10 2380 etcd-0.cp.darumtech.net.
-_etcd-server-ssl._tcp.cp.darumtech.net. IN SRV 0 10 2380 etcd-1.cp.darumtech.net.
-_etcd-server-ssl._tcp.cp.darumtech.net. IN SRV 0 10 2380 etcd-2.cp.darumtech.net.
+cp.kubepia.com. IN A 172.168.0.189
+api.cp.kubepia.com. IN A 172.168.0.189
+api-int.cp.kubepia.com. IN A 172.168.0.189
+*.apps.cp.kubepia.com. IN A 172.168.0.189
+bootstrap.cp.kubepia.com. IN A 172.168.0.180
+master-0.cp.kubepia.com. IN A 172.168.0.186
+master-1.cp.kubepia.com. IN A 172.168.0.185
+master-2.cp.kubepia.com. IN A 172.168.0.184
+worker-1.cp.kubepia.com. IN A 172.168.0.183
+worker-2.cp.kubepia.com. IN A 172.168.0.182
+etcd-0.cp.kubepia.com. IN A 172.168.0.186
+etcd-1.cp.kubepia.com. IN A 172.168.0.185
+etcd-2.cp.kubepia.com. IN A 172.168.0.184
+_etcd-server-ssl._tcp.cp.kubepia.com. IN SRV 0 10 2380 etcd-0.cp.kubepia.com.
+_etcd-server-ssl._tcp.cp.kubepia.com. IN SRV 0 10 2380 etcd-1.cp.kubepia.com.
+_etcd-server-ssl._tcp.cp.kubepia.com. IN SRV 0 10 2380 etcd-2.cp.kubepia.com.
 ns IN A 172.168.0.189
 www IN A 172.168.0.189
 ```
