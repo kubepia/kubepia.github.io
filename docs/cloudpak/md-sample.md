@@ -54,10 +54,10 @@ Markdown에 대한 예제입니다.
 ```
 
 ## 이미지 
-![kubepia](http://localhost:8080/assets/img/kubepia.png)
+![kubepia](https://kubepia.github.io/assets/img/kubepia.png)
 ```
 ## 이미지 
-![kubepia](http://localhost:8080/assets/img/kubepia.png)
+![kubepia](https://kubepia.github.io/assets/img/kubepia.png)
 ```
 
 ## Source code
