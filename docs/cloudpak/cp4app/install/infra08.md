@@ -1,15 +1,15 @@
-# Infra Servers-SSLKey 구성
+# Infra Servers-SSH Key 구성
 
 :::tip TASK DESCRIPTION
-SSL Key를 생성합니다.  
-각 VM을 ssh로 쉽게 접근하게 하기 위해 SSL public key를 각 VM에 복사합니다.  
+SSH Key를 생성합니다.  
+각 VM을 ssh로 쉽게 접근하게 하기 위해 SSH public key를 각 VM에 복사합니다.  
  
 [[toc]] 
 :::
 
-## SSL Key 생성
+## SSH Key 생성
 Terminal 또는 ssh명령으로 bastion VM을 접근합니다.  
-Test용 SSL Key를 생성합니다.   
+Test용 SSH Key를 생성합니다.   
 ```
 $ ssh-keygen -b 4096 -t rsa
 ```
@@ -20,8 +20,8 @@ $ ssh-keygen -b 4096 -t rsa
 
 ![](./img/2020-05-24-23-50-21.png)
 
-## Public SSL Key 복사
-ssh로 접근할 각 VM에 public ssl key파일을 복사합니다.  
+## Public SSH Key 복사
+ssh로 접근할 각 VM에 public ssh key파일을 복사합니다.  
 ```
 $ ssh-copy-id -i ~/.ssh/id_rsa.pub root@<대상 VM IP>
 ```
@@ -58,7 +58,7 @@ Host <VM alias>
     HostName <VM IP>
     Port <SSH PORT>
     User <User ID>
-    IdentityFile <Private SSL Key파일 경로>
+    IdentityFile <Private SSH Key파일 경로>
 ```
 예제)  
 ```
