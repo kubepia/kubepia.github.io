@@ -6,6 +6,7 @@ module.exports = {
 	description: "Technical guidelines about kubernetes",
 	// dest: "./docs",
 	plugins: ["@vuepress/back-to-top"],
+	
 	markdown: {},
 	head: [
 		[

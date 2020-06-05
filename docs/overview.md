@@ -1,6 +1,6 @@
 ---
 heroImage: /assets/img/hero.jpg
-heroText: kubepia
+heroText:
 tagline: enjoy kubernetes technology with us
 actionText: Get Started →
 actionLink: /overview
@@ -13,3 +13,4 @@ features:
   details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
 footer: MIT Licensed | Copyright © 2018-present Evan You
 ---
+
