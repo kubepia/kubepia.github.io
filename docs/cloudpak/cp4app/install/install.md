@@ -22,7 +22,7 @@ IBM에 책임을 물으시면 안됩니다.
 - [HAProxy 설치](https://kubepia.github.io/cloudpak/cp4app/install/infra05.html)
 - [DHCP 설치](https://kubepia.github.io/cloudpak/cp4app/install/infra06.html)
 - [NFS서버 설치](https://kubepia.github.io/cloudpak/cp4app/install/infra07.html)
-- [SSL Key 구성](https://kubepia.github.io/cloudpak/cp4app/install/infra08.html)
+- [SSH Key 구성](https://kubepia.github.io/cloudpak/cp4app/install/infra08.html)
 - [iptables 설치](https://kubepia.github.io/cloudpak/cp4app/install/infra09.html)
 
 ## OCP 설치
