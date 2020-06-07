@@ -89,8 +89,12 @@ module.exports = {
 							path: "/ocp/overview"
 						},
 						{
-							title: "Install-UPI",
+							title: "Install",
 							path: "/ocp/install-upi"
+						},
+						{
+							title: "Mirror Registry",
+							path: "/ocp/mirror-registry"
 						}
 					]
 				}

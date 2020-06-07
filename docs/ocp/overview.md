@@ -1,10 +1,8 @@
 # Overview
 
 ## install ocp4.x
-- install UPI(vmware)
+- [install UPI(vmware)](/cloudpak/cp4app/install/install)
 
 
 ## setting mirror
-Hello
-
-Hello12!!!
+- [Mirror Registry](/ocp/mirror-registry)
