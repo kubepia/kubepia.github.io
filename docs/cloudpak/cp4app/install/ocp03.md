@@ -42,12 +42,10 @@ $ vi sc-nfs-retain.yaml
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  #annotations:
-    #storageclass.kubernetes.io/is-default-class: "true"
   name: nfs-retain
 provisioner: standard
 reclaimPolicy: Retain
-volumeBindingMode: Immediage
+volumeBindingMode: Immediate
 
 $ oc apply -f sc-nfs-retain.yaml
 ```
