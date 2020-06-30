@@ -120,10 +120,8 @@ storageclass YAML sample
 apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
-  #annotations:
-    #storageclass.kubernetes.io/is-default-class: "true"
   name: nfs-standard
-provisioner: kubernetes.io/no-provisioner
+provisioner: standard
 reclaimPolicy: Retain
 volumeBindingMode: WaitForFirstConsumer
 ```
