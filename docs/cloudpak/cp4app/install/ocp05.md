@@ -40,6 +40,55 @@ shlee:$2y$05$Lx9qrVCFnC1weCMkOkj/jOA6kOkM49CjhnQrOOVFHmyrwhHz0b2Ta \
   - OCP web console > user management > Role bindings
   - create role binding 
 
+## ldap 추가
+
+먼저 아래 링크 참조하여 LDAP서버 설치 및 구성합니다.  
+[LDAP서버 설치 및 구성](https://kubepia.github.io/cloudpak/cp4app/install/cp4app01.html)
+
+그리고 OCP Web console에서 IdP를 LDAP 타입으로 추가합니다.  
+아래 YAML내용을 참조하여 url, attributes > id, insecure 부분을 지정하십시오.  
+url이 맞는지 확인하려면 'curl <url>'명령을 이용하십시오.  
+```
+apiVersion: config.openshift.io/v1
+kind: OAuth
+metadata:
+  annotations:
+    release.openshift.io/create-only: 'true'
+  creationTimestamp: '2020-07-02T04:17:40Z'
+  generation: 26
+  name: cluster
+  resourceVersion: '129232'
+  selfLink: /apis/config.openshift.io/v1/oauths/cluster
+  uid: 2c5c1e08-a2b8-4684-9282-83fb5f9fa528
+spec:
+  identityProviders:
+    - htpasswd:
+        fileData:
+          name: htpasswd-cw55j
+      mappingMethod: claim
+      name: ADMINS
+      type: HTPasswd
+    - ldap:
+        attributes:
+          email: []
+          id:
+            - uid
+          name:
+            - cn
+          preferredUsername:
+            - uid
+        bindDN: 'cn=admin,dc=ldap,dc=kubepia,dc=com'
+        bindPassword:
+          name: ldap-bind-password-b5j5j
+        insecure: true
+        url: 'ldap://ldap.kubepia.com:389/ou=users,dc=ldap,dc=kubepia,dc=com?uid'
+      mappingMethod: claim
+      name: ldap
+      type: LDAP
+```
+
+
+
 ## keycloak 추가
 
 ### keycloak 설치
