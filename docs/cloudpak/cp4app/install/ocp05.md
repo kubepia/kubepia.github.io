@@ -46,8 +46,11 @@ shlee:$2y$05$Lx9qrVCFnC1weCMkOkj/jOA6kOkM49CjhnQrOOVFHmyrwhHz0b2Ta \
 [LDAP서버 설치 및 구성](https://kubepia.github.io/cloudpak/cp4app/install/cp4app01.html)
 
 그리고 OCP Web console에서 IdP를 LDAP 타입으로 추가합니다.  
-아래 YAML내용을 참조하여 url, attributes > id, insecure 부분을 지정하십시오.  
+아래 화면Y을 참조하여 url, attributes > id을 정확하게 지정하십시오.
 url이 맞는지 확인하려면 'curl <url>'명령을 이용하십시오.  
+![](./img/2020-07-03-08-37-15.png)
+
+등록 후 YAML에서 'insecure'를 'true'로 변경하십시오.    
 ```
 apiVersion: config.openshift.io/v1
 kind: OAuth
@@ -86,6 +89,18 @@ spec:
       name: ldap
       type: LDAP
 ```
+
+저장 후 namespace 'openshift-authentication'의 Pod 2개가 재생성될때까지 기다립니다.   
+```
+[root@ocp-infra1 ~]# oc get po -n openshift-authentication
+NAME                               READY   STATUS    RESTARTS   AGE
+oauth-openshift-5cff94bdcd-5kqcx   1/1     Running   0          14h
+oauth-openshift-5cff94bdcd-gcvlr   1/1     Running   0          14h
+```
+
+로그아웃 후 LDAP으로 로그인하는 버튼이 나올때까지 기다립니다.  
+인증 되는지 테스트합니다.  
+![](./img/2020-07-03-08-42-19.png)
 
 
 
