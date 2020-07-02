@@ -127,7 +127,7 @@ Redhat Document : [](https://docs.openshift.com/container-platform/4.4/installin
 ### Mirroring
 
 1. 환경변수 설정 : 
-   1. OCP_RELEASE : 설치할 OCP 버전 지정 예) 4.4.7. 다음 싸이트에서 선택 https://quay.io/repository/openshift-release-dev/ocp-release?tab=tags
+   1. OCP_RELEASE : 설치할 OCP 버전 지정 예) 4.4.7. 다음 싸이트에서 선택 [Repo list](https://quay.io/repository/openshift-release-dev/ocp-release?tab=tags)
    2. LOCAL_REGISTRY : Mirror Registry URL 예) registry.kubepia.net:5000
    3. LOCAL_REPOSITORY : Registry Repository Name 예)ocp4/openshift4
    4. PRODUCT_REPO : predefined 예) openshift-release-dev
