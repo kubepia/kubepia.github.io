@@ -51,7 +51,7 @@ shlee:$2y$05$Lx9qrVCFnC1weCMkOkj/jOA6kOkM49CjhnQrOOVFHmyrwhHz0b2Ta \
 - IdP추가: LDAP 선택   
 
 아래 화면을 참조하여 값을 지정합니다. 특히 url, attributes > id을 정확하게 지정하십시오.  
-url이 맞는지 확인하려면 'curl <url>'명령을 이용하십시오.  
+url이 맞는지 확인하려면 'curl [url]'명령을 이용하십시오.  
 ![](./img/2020-07-03-08-37-15.png)
 
 등록 후 YAML에서 'insecure'를 'true'로 변경하십시오.    
@@ -102,7 +102,7 @@ oauth-openshift-5cff94bdcd-5kqcx   1/1     Running   0          14h
 oauth-openshift-5cff94bdcd-gcvlr   1/1     Running   0          14h
 ```
 
-LDAP url에 대해 role binding을 합니다.  
+user에 권한 부여를 위해 role binding을 합니다.  
 - OCP web console > user management > Role bindings
 - create role binding 
 아래는 cluster-admin 권한을 부여하는 role binding 예제입니다.  
