@@ -104,14 +104,14 @@ oauth-openshift-5cff94bdcd-gcvlr   1/1     Running   0          14h
 
 user에 권한 부여를 위해 role binding을 합니다.  
 - OCP web console > user management > Role bindings
-- create role binding 
+- create role binding  
+
 아래는 cluster-admin 권한을 부여하는 role binding 예제입니다.  
 ![](./img/2020-07-03-08-55-51.png)
 
 로그아웃 후 LDAP으로 로그인하는 버튼이 나올때까지 기다립니다.  
-추가한 user로 인증 되는지 테스트합니다.  
+추가한 user로 인증 되는지 테스트합니다.   
 ![](./img/2020-07-03-08-42-19.png)
-
 
 
 ## keycloak 추가
