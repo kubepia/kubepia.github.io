@@ -241,5 +241,22 @@ Credential값을 clipboard에 복사합니다.
 ### OCP의 IdP로 keycloak 등록
 등록방법 찾는중입니다.  
 
+## User IdP 변경
+- **User identities정보 삭제**  
+
+```
+$ oc get User
+$ oc edit User hklee
+```
+| As-Is | To-Be |
+|:------|:------|
+| ![](./img/2020-07-07-22-52-33.png) | ![](./img/2020-07-07-22-55-55.png) |
+
+- **identities 리소스 삭제**  
+```
+$ oc get identities
+$ oc delete identities admin:hklee
+```
+
 ---
 <disqus/>
