@@ -242,6 +242,10 @@ Credential값을 clipboard에 복사합니다.
 등록방법 찾는중입니다.  
 
 ## User IdP 변경
+User의 IdP가 변경(예: htpasswd -> LDAP)된 경우 처리에 대해 설명합니다.   
+IdP가 변경된 경우 User를 삭제하고, 로그인 하려고 하면 'Cannot crete user'라는 에러가 발생합니다.   
+아래와 같이 기존 User의 identities정보와 리소스를 삭제하고, 다시 로그인하면 됩니다.  
+
 - **User identities정보 삭제**  
 
 ```
@@ -258,5 +262,11 @@ $ oc get identities
 $ oc delete identities admin:hklee
 ```
 
+- **재 로그인**  
+새로운 IdP로 다시 로그인하고 User정보를 보면 새로운 Identity정보로 변경된것을 확인할 수 있습니다.  
+```
+$ oc get User
+$ oc get identities
+```
 ---
 <disqus/>
