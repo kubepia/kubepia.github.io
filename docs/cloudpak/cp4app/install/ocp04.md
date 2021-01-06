@@ -123,7 +123,7 @@ metadata:
   name: nfs-standard
 provisioner: standard
 reclaimPolicy: Retain
-volumeBindingMode: WaitForFirstConsumer
+volumeBindingMode: Immediate
 ```
 ​
 ## nfs-provisioner Pod 배포

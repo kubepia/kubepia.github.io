@@ -143,7 +143,7 @@ module.exports = {
 											path: BASEDIR_CP4APP_INSTALL+"/infra07"
 										},
 										{
-											title: "Infra Servers-SSLKey 구성",
+											title: "Infra Servers-SSH Key 구성",
 											path: BASEDIR_CP4APP_INSTALL+"/infra08"
 										},
 										{
