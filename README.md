@@ -1,6 +1,7 @@
 # kubepia.github.io
 > 본 프로젝트는 kubernetes관련 정보공유 사이트인 [kubepia](http://kubepia.github.io)의 글 관리를 위해 운영됩니다.   
 
+
 ## kubepia 가입 신청
 kubepia는 공개 커뮤니티이므로 누구나 가입하여 글을 올릴 수 있습니다.  
 공개 커뮤니티이기 때문에 글을 올리실 목적이 아니라면 가입 없이도 자유롭게 글을 보실수 있습니다.  
